@@ -45,6 +45,7 @@ export default {
     const yOff = 0.005;
     const zOff = 0.0005;
     const backgroundColor = 'hsla(60,50%,3%,1)';
+    const menu = document.querySelector('#menu');
 
     let container;
     let canvas;
