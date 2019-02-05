@@ -20,10 +20,18 @@ export default {
 
     canvas.height = window.innerHeight;
     canvas.width = window.innerWidth;
+    c.fillStyle = 'red';
+    c.fillRect(0, 0, canvas.width, canvas.height);
 
-    const conf = {
-        lineCounter: 200
+
+    let cursor = {
+        x: 0,
+        y: 0
     }
+    canvas.addEventListener('mousemove', (ev)=>{
+        cursor.x = ev.clientX;
+        cursor.y = ev.clientY;
+    })
 
     function animate () {
         // requestAnimationFrame(animate);
@@ -49,14 +57,17 @@ export default {
         let info = {
             x: rand(window.innerWidth),
             y: rand(window.innerHeight),
-            xspeed: randFromTo(1, 200),
-            yspeed: randFromTo(1, 200),
+            xlength: randFromTo(-20, window.innerWidth + 20),
+            ylength: randFromTo(-20, window.innerHeight + 20),
+            xspeed: .5,
+            yspeed: .2,
             colors: ['#C7E9F3', '#B3D1DA', '#8FA7AE'],
             colorNumber: 0, // must be number of colors.length - 1
-            howMuchLines: 100,
+            howMuchLines: 500,
         }
         return info;
     }
+    let speed = 5;
 
     let lines = [];
     for (let i = 0; i < createLinesInfo().howMuchLines; i++){
@@ -69,12 +80,38 @@ export default {
     function createLines() {
         requestAnimationFrame(createLines);
         c.clearRect(0, 0, window.innerWidth, window.innerHeight);
-        
+
         lines.forEach(el => {
+            
+            el.x += el.xspeed;
+            el.y += el.yspeed;
+            
+            if ( el.x >= window.innerWidth ) {
+                el.xspeed = -el.xspeed;
+            } else if ( el.x <= 0 ) {
+                el.xspeed = -el.xspeed;
+            }
+
+            if ( el.y >= window.innerHeight ) {
+                el.yspeed = -el.yspeed;
+            } else if ( el.y <= 0 ) {
+                el.yspeed = -el.yspeed;
+            }
+
+            
+
+            // if ( el.x >= window.innerWidth ) {
+            //     el.x -= 5;
+            // }
+
+            
             c.beginPath();
-            c.strokeStyle = el.colors[el.colorNumber];
             c.moveTo(el.x, el.y);
-            c.lineTo(el.xspeed, el.yspeed);
+            c.lineTo(el.xlength, el.ylength);
+
+            // c.fillStyle = el.colors[el.colorNumber];
+            c.strokeStyle = el.colors[el.colorNumber];
+            // c.fill();
             c.stroke();
         })
     }
