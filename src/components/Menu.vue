@@ -1,7 +1,9 @@
 <template>
     <header>
         <nav>
-            elo
+            <ul>
+                <li></li>
+            </ul>
         </nav>
     </header>
 </template>
@@ -12,7 +14,8 @@ export default {
 
   data: () => {
     return {
-        test: "hello"
+        menu: {
+        }
     }
   },
 

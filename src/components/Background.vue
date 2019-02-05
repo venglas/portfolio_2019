@@ -118,7 +118,7 @@ export default {
         x2 = x + vx * speed;
         y2 = y + vy * speed;
         size = particleProps[i8];
-        hue = particleProps[i9];
+        hue = particleProps[9];
 
         drawParticle(x, y, theta, life, ttl, size, hue);
 
