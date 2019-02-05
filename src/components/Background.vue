@@ -34,15 +34,6 @@ export default {
     })
 
     function animate () {
-        // requestAnimationFrame(animate);
-        // c.clearRect(0, 0, window.innerWidth, window.innerHeight);
-
-        // c.beginPath();
-        // c.strokeStyle = "red";
-        // c.moveTo(Math.random()*window.innerWidth, Math.random()*window.innerHeight);
-        // c.lineTo(Math.random()*window.innerWidth, Math.random()*window.innerHeight);
-        // c.stroke();
-
     }
 
     function rand(how) {
@@ -59,12 +50,13 @@ export default {
             y: rand(window.innerHeight),
             xlength: randFromTo(-20, window.innerWidth + 20),
             ylength: randFromTo(-20, window.innerHeight + 20),
-            xspeed: .2,
-            yspeed: .3,
+            xspeed: .4,
+            yspeed: .6,
             // colors: ['#C7E9F3', '#B3D1DA', '#8FA7AE'],
             colors: ['rgba(0, 255, 255, 0.4)', 'rgba(0, 255, 197, 0.4)', 'rgba(0, 89, 197, 0.4)'],
+            colorsDarkness: ['rgba(0, 255, 255, 0.8)', 'rgba(0, 255, 197, 0.8)', 'rgba(0, 89, 197, 0.8)'],
             colorNumber: 0, // must be number of colors.length - 1
-            howMuchLines: 80,
+            howMuchLines: 12,
         }
         return info;
     }
@@ -82,6 +74,9 @@ export default {
         c.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
         lines.forEach(el => {
+            window.addEventListener('click', () => {
+                el.colorNumber = randFromTo(0, 3);
+            })
             
             el.x += el.xspeed;
             el.y += el.yspeed;
@@ -111,7 +106,7 @@ export default {
             c.lineTo(el.xlength + 55, el.ylength + 35);
 
             c.fillStyle = el.colors[el.colorNumber];
-            c.strokeStyle = el.colors[el.colorNumber];
+            c.strokeStyle = el.colorsDarkness[el.colorNumber];
             c.fill();
             c.stroke();
         })
@@ -128,5 +123,6 @@ export default {
         top: 0;
         left: 0;
         background-color: rgba(0, 65, 90, .8);
+        opacity: .7;
     }
 </style>
