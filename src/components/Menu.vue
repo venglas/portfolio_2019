@@ -8,7 +8,7 @@
             </ul>
         </nav>
 
-        <button class="button button--start" v-on:click="start_button" v-show="startButton.show">
+        <button class="button button--start" v-on:click="start_button" v-show="startButton.show" v-bind:class="{hideStartButton : startButton.hideStartButtonClass}">
             start
         </button>
     </header>
@@ -25,7 +25,8 @@ export default {
             show: false
         },
         startButton: {
-            show: true
+            show: true,
+            hideStartButtonClass: false,
         }
     }
   },
@@ -33,7 +34,10 @@ export default {
   methods: {
     start_button(){
         this.menu.show = true;
-        this.startButton.show = false;
+        this.startButton.hideStartButtonClass = true;
+        setTimeout(() => {
+            this.startButton.show = false;
+        }, 1500); // 1500 cuz it's animation time
     }
   },
 

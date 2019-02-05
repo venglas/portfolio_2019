@@ -15,15 +15,4 @@
         animation-fill-mode: forwards;
         animation-timing-function: ease;
     }
-
-    @keyframes show_menu {
-        0% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY( calc(50vh - 50%) )
-        }
-    }
 }

@@ -1,0 +1,29 @@
+@keyframes show_menu {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY( calc(50vh - 50%) )
+    }
+}
+
+.hideStartButton{
+    animation-name: hide_start_button;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes hide_start_button{
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
