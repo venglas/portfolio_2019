@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import './scss/main.scss';
 import Background from './components/Background';
 import Menu from './components/Menu';
 

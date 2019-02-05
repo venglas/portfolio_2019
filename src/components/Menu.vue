@@ -1,9 +1,7 @@
 <template>
     <header>
         <nav>
-            <h1 style="color: white;">
-                elo
-            </h1>
+            elo
         </nav>
     </header>
 </template>
