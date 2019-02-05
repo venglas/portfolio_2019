@@ -1,14 +1,11 @@
-<template>
-</template>
+<template></template>
 
 <script>
 export default {
   name: 'Background',
 
   data: () => {
-    return {
-        test: "hello"
-    }
+    return {}
   },
 
   methods: {},
@@ -37,8 +34,8 @@ export default {
     const particlePropsLength = particleCount * particlePropCount;
     const baseTTL = 100;
     const rangeTTL = 500;
-    const baseSpeed = 0.15;
-    const rangeSpeed = 1;
+    const baseSpeed = 0.1;
+    const rangeSpeed = .5;
     const baseSize = 2;
     const rangeSize = 15;
     const baseHue = 20;
@@ -159,11 +156,12 @@ export default {
                 b: document.createElement('canvas')
             };
             canvas.b.style = `
-                position: fixed;
+                position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
+                z-index: -100
             `;
             container.appendChild(canvas.b);
             ctx = {
@@ -232,13 +230,3 @@ export default {
   }
 }
 </script>
-
-<style>
-    /* canvas{
-        position: absolute;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 65, 90, .8);
-        opacity: .7;
-    } */
-</style>
