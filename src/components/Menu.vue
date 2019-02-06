@@ -57,7 +57,7 @@ export default {
                 this.menu.menu.style.left = '0px';
                 setTimeout(() => {
                     this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 20}px`;
-                }, 3000);
+                }, 2000);
             }, 200);
         }
     }

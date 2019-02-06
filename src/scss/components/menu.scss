@@ -8,6 +8,8 @@
         display: flex;
         justify-content: space-around;
         opacity: 0;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 30px rgba($white, .5);
 
         animation-name: show_menu;
         animation-duration: 1500ms;

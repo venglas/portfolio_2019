@@ -5,7 +5,8 @@ export default {
   name: 'Background',
 
   data: () => {
-    return {}
+    return {
+    }
   },
 
   methods: {},
@@ -45,7 +46,6 @@ export default {
     const yOff = 0.005;
     const zOff = 0.0005;
     const backgroundColor = 'hsla(60,50%,3%,1)';
-    const menu = document.querySelector('#menu');
 
     let container;
     let canvas;
@@ -120,7 +120,7 @@ export default {
         y2 = y + vy * speed;
         size = particleProps[i8];
         hue = particleProps[9];
-
+        
         drawParticle(x, y, theta, life, ttl, size, hue);
 
         life++;
