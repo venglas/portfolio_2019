@@ -21,6 +21,7 @@ export default {
   data: () => {
     return {
         menu: {
+            menu: null, // in mounted put there html element
             items: ['start', 'projects', 'about', 'cv'],
             show: false,
             hideMenu: false,
@@ -53,9 +54,9 @@ export default {
         if (this.menu.menuToggleTutorial === false) {
             this.menu.menuToggleTutorial = true;
             setTimeout(() => {
-                document.querySelector('#menu').style.left = '0px';
+                this.menu.menu.style.left = '0px';
                 setTimeout(() => {
-                    document.querySelector('#menu').style.left = '-90px';
+                    this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 20}px`;
                 }, 3000);
             }, 200);
         }
@@ -63,7 +64,7 @@ export default {
   },
 
   mounted () {
-    // document.querySelector('#menu').style.transition = 'all ease 1000ms';
+    this.menu.menu = document.querySelector('#menu')
   }
 }
 </script>
