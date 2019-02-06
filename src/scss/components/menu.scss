@@ -16,3 +16,36 @@
         animation-timing-function: ease;
     }
 }
+
+.hideHorizontalMenu{
+    .list__item{
+        transform: scale(0);
+        transition: all ease-out 1000ms;
+    }
+}
+
+.leftSideMenu{
+    height: 100%;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(black, .85);
+    position: absolute;
+    left: -100px;
+    transition: all ease 1500ms;
+
+    h1{
+        font-size: 2rem;
+    }
+
+    .list__item{
+        margin: 1rem 2rem;
+        transform: scale(1);
+        transition: all ease;
+    }
+
+    &:hover{
+        left: 0px !important;
+        transition: all ease 500ms;
+    }
+}

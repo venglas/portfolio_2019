@@ -9,6 +9,24 @@
     }
 }
 
+@keyframes leftSideMenu{
+    // 0%{
+    //     transform: scale(1) translateX(-120px);
+    // }
+
+    // 20%{
+    //     transform: scale(1) translateX(0);
+    // }
+
+    // 70%{
+    //     transform: scale(1) translateX(0);
+    // }
+
+    // 100%{
+    //     transform: scale(1) translateX(-90px);
+    // }
+}
+
 .hideStartButton{
     animation-name: hide_start_button;
     animation-duration: 1000ms;
