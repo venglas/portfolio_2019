@@ -24,7 +24,8 @@ export default {
             items: ['start', 'projects', 'about', 'cv'],
             show: false,
             hideMenu: false,
-            leftSideMenu: false
+            leftSideMenu: false,
+            menuToggleTutorial: false
         },
         startButton: {
             show: true,
@@ -49,12 +50,15 @@ export default {
         }, 1000)
     },
     menuAutoToggle(){
-        setTimeout(() => {
-            document.querySelector('#menu').style.left = '0px';
+        if (this.menu.menuToggleTutorial === false) {
+            this.menu.menuToggleTutorial = true;
             setTimeout(() => {
-                document.querySelector('#menu').style.left = '-90px';
-            }, 3000);
-        }, 200);
+                document.querySelector('#menu').style.left = '0px';
+                setTimeout(() => {
+                    document.querySelector('#menu').style.left = '-90px';
+                }, 3000);
+            }, 200);
+        }
     }
   },
 
