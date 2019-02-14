@@ -7,12 +7,17 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        bg_rectangle_color: ''
+        interface: {
+            is_on: false
+        }
     },
 
     mutations: {
-        update_bg_rectangle_color (state) {
-            state.bg_rectangle_color = true;
+        interface_show(state){
+            state.interface.is_on = true;
+        },
+        interface_hide(state){
+            state.interface.is_on = false;
         }
     }
 });

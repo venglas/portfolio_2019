@@ -1,10 +1,12 @@
 <template>
-    <div class="logo">
-        <div class="logo-border" v-on:click="test"></div>
-        <span class="letter">
-            P
-        </span>
-    </div>
+    <transition name="fade">
+        <div class="logo" v-show="$store.state.interface.is_on">
+            <div class="logo-border"></div>
+            <span class="letter">
+                P
+            </span>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -12,19 +14,12 @@ export default {
   name: 'Logo',
 
   data: () => {
-    return {
-      
-    }
+    return {}
   },
 
-  methods: {
-      test(){
-         this.$store.commit('update_bg_rectangle_color');
-      }
-  },
+  methods: {},
 
-  mounted () {
-  }
+  mounted () {}
 }
 </script>
 
