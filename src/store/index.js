@@ -7,12 +7,14 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-      test: false
+        bg_rectangle_color: ''
     },
 
     mutations: {
-        changeTestValue (state) {
-            state.test = true
+        update_bg_rectangle_color (state) {
+            state.bg_rectangle_color = true;
         }
     }
 });
+
+export default store;

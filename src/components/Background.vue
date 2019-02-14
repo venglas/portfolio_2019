@@ -12,6 +12,7 @@ export default {
   methods: {},
 
   mounted () {
+
     const { PI, cos, sin, abs, sqrt, pow, round, random, atan2 } = Math;
     const HALF_PI = 0.5 * PI;
     const TAU = 2 * PI;
@@ -134,6 +135,7 @@ export default {
         life > ttl && initParticle(i);
     }
 
+    let drawParticleI = 0;
     function drawParticle(x, y, theta, life, ttl, size, hue) {
         let xRel = x - (0.5 * size), yRel = y - (0.5 * size);
         
@@ -148,6 +150,12 @@ export default {
         ctx.a.strokeRect(xRel, yRel, size, size);
         ctx.a.closePath();
         ctx.a.restore();
+
+        drawParticleI++;
+
+        if (drawParticleI > 20){
+            // this.$store.commit('update_bg_rectangle_color', `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`);
+        }
     }
 
     function createCanvas() {

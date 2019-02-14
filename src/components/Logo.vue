@@ -1,6 +1,6 @@
 <template>
     <div class="logo">
-        <div class="logo-border"></div>
+        <div class="logo-border" v-on:click="test"></div>
         <span class="letter">
             P
         </span>
@@ -18,6 +18,9 @@ export default {
   },
 
   methods: {
+      test(){
+         this.$store.commit('update_bg_rectangle_color');
+      }
   },
 
   mounted () {
