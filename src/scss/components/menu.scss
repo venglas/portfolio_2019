@@ -10,6 +10,7 @@
         opacity: 0;
         text-transform: uppercase;
         text-shadow: 0px 0px 30px rgba($white, .5);
+        z-index: $z_index_med;
 
         animation-name: show_menu;
         animation-duration: 1500ms;

@@ -3,7 +3,7 @@
         <nav class="nav nav--page" v-show="menu.show">
             <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : menu.hideMenu, leftSideMenu : menu.leftSideMenu}">
                 <li class="list__item" v-for="items in menu.items" v-on:click="hideMenu">
-                    <h1>{{items}}</h1>
+                    <h1 v-on:click="$router.push('/test')">{{items}}</h1>
                 </li>
             </ul>
         </nav>
@@ -64,7 +64,14 @@ export default {
   },
 
   mounted () {
-    this.menu.menu = document.querySelector('#menu')
+    this.menu.menu = document.querySelector('#menu');
+
+    window.addEventListener('resize', () => {
+        setTimeout(() => {
+            console.log(`${this.menu.menu.offsetWidth + 25}px`)
+            this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` );
+        }, 500);
+    });
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <Logo></Logo>
     <Menu></Menu>
     <Background></Background>
-    <!-- <router-view/> -->
+    <router-view/>
   </div>
 </template>
 

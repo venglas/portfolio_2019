@@ -8,7 +8,8 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
     state: {
         interface: {
-            is_on: false
+            is_on: false,
+            menu_width: 0
         }
     },
 
@@ -18,6 +19,9 @@ const store = new Vuex.Store({
         },
         interface_hide(state){
             state.interface.is_on = false;
+        },
+        set_menu_width(state, width){
+            state.interface.menu_width = width;
         }
     }
 });
