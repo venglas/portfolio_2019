@@ -44,21 +44,3 @@ export default {
   mounted(){}
 }
 </script>
-
-<style lang="scss">
-    .anim{
-        animation-name: letter_jump;
-        animation-duration: 200ms;
-        animation-fill-mode: forwards;
-    }
-
-    @keyframes letter_jump {
-        0% {
-            transform: rotate(0deg)
-        }
-
-        100% {
-            transform: rotate(180deg)
-        }
-    }
-</style>
