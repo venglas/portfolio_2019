@@ -1,0 +1,23 @@
+// SPACES
+
+@mixin small-space-desktop {
+    margin: 1rem 0;
+}
+
+@mixin medium-space-desktop {
+    margin: 2rem 0;
+}
+
+@mixin big-space-desktop {
+    margin: 4rem 0;
+}
+
+//
+
+@mixin small-bottom-space {
+    margin-bottom: 1rem;
+}
+
+@mixin medium-bottom-space {
+    margin-bottom: 2rem;
+}

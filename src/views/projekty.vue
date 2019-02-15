@@ -4,7 +4,7 @@
       
       <section class="section section--projects">
         <div class="single-project">
-          
+           <img src="../assets/sample.png" alt="">
         </div>
       </section>
     </article>
@@ -31,3 +31,7 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+
+</style>

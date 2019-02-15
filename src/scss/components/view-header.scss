@@ -1,4 +1,6 @@
 .view__header{
+    @include medium-bottom-space;
+
     .header-letter{
         padding: 0;
         margin: 0;
