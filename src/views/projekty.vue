@@ -1,7 +1,11 @@
 <template>
-    <div class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
+    <article class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
       <ViewHeader text="projekty"></ViewHeader>
-    </div>
+      
+      <section>
+        
+      </section>
+    </article>
 </template>
 
 <script>

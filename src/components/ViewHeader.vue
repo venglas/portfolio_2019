@@ -1,15 +1,15 @@
 <template>
-    <div class="view-header">
+    <header class="view__header">
         <h2 v-show="!prop.text">
             {{text}}
         </h2>
 
         <h2 v-show="prop.text">
-            <span v-for="letter in prop.text" class="view-header__letter" v-on:click="change_color">
+            <span v-for="letter in prop.text" class="header-letter" v-on:click="change_color">
                 {{letter}}
             </span>
         </h2>
-    </div>
+    </header>
 </template>
 
 <script>
