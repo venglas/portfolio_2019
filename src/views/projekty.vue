@@ -2,8 +2,10 @@
     <article class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
       <ViewHeader text="projekty"></ViewHeader>
       
-      <section>
-        
+      <section class="section section--projects">
+        <div class="single-project">
+          
+        </div>
       </section>
     </article>
 </template>

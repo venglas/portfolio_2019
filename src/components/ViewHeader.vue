@@ -5,8 +5,8 @@
         </h2>
 
         <h2 v-show="prop.text">
-            <span v-for="letter in prop.text" class="header-letter" v-on:click="change_color">
-                {{letter}}
+            <span v-for="letter in prop.text" class="header-letter" v-on:click="change_color" v-html="letter">
+                <!-- html text is added here via v-html because must use  &nbsp; as spacebar-->
             </span>
         </h2>
     </header>
@@ -29,7 +29,12 @@ export default {
     const scope = this;
 
     for (let i = 0; i < this.text.length; i++){
+      if(this.text[i] === ' '){
+        letters.push('&nbsp;')
+      } else {
         letters.push(this.text[i]);
+      }
+      
     }
 
     this.prop.text = letters;
