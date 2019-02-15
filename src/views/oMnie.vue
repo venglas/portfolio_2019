@@ -1,20 +1,15 @@
 <template>
-    <div class="view" v-bind:style="{marginLeft: margin_left}">
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
-      <h1 style="color: red">O MNIE</h1>
+    <div class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
+      <ViewHeader text="o mnie"></ViewHeader>
     </div>
 </template>
 
 <script>
+import ViewHeader from '../components/ViewHeader';
+
 export default {
   name: 'oMnie',
+  components: {ViewHeader},
   data: () => {
     return {
       margin_left: '180px'
