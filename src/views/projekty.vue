@@ -21,22 +21,11 @@ export default {
     }
   },
   mounted(){
-
-
-      window.addEventListener('resize', () => {
-        setTimeout(() => {
-          this.margin_left = `${this.$store.state.interface.menu_width}`;
-        }, 200);
-      })
-
+    window.addEventListener('resize', () => {
+      setTimeout(() => {
+        this.margin_left = `${this.$store.state.interface.menu_width}`;
+      }, 200);
+    })
   }
 }
 </script>
-
-<style>
-.view{
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-</style>
