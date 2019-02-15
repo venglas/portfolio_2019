@@ -3,7 +3,11 @@
     <Logo></Logo>
     <Menu></Menu>
     <Background></Background>
-    <router-view/>
+
+    <transition name="slide-fade">
+      <router-view/>
+    </transition>
+    
   </div>
 </template>
 

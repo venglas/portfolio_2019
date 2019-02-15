@@ -2,8 +2,8 @@
     <header class="header header--page">
         <nav class="nav nav--page" v-show="menu.show">
             <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : menu.hideMenu, leftSideMenu : menu.leftSideMenu}">
-                <li class="list__item" v-for="items in menu.items" v-on:click="hideMenu">
-                    <h1 v-on:click="$router.push('/test')">{{items}}</h1>
+                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu()">
+                    <h1>{{item.name}}</h1>
                 </li>
             </ul>
         </nav>
@@ -22,7 +22,7 @@ export default {
     return {
         menu: {
             menu: null, // in mounted put there html element
-            items: ['start', 'projects', 'about', 'cv'],
+            routes: [],
             show: false,
             hideMenu: false,
             leftSideMenu: false,
@@ -63,9 +63,13 @@ export default {
     }
   },
 
+  created(){
+    this.menu.routes = this.$router.options.routes;
+  },
+
   mounted () {
     this.menu.menu = document.querySelector('#menu');
-
+    
     window.addEventListener('resize', () => {
         setTimeout(() => {
             console.log(`${this.menu.menu.offsetWidth + 25}px`)
