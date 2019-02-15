@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="logo" v-show="$store.state.interface.is_on">
+        <div class="logo" v-show="$store.state.interface.is_on" v-on:click="$router.push('/')">
             <div class="logo-border"></div>
             <span class="letter">
                 P
