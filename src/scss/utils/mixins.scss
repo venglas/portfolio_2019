@@ -21,3 +21,10 @@
 @mixin medium-bottom-space {
     margin-bottom: 2rem;
 }
+
+// before, after
+
+@mixin before-after {
+    content: '';
+    position: absolute;
+}

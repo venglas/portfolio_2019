@@ -5,7 +5,6 @@
         &:hover{
             transform: scale(1.02);
             text-shadow: 2px 2px 30px rgba(rgb(218, 255, 255), .55);
-
             color: $white;
         }
     }
@@ -21,7 +20,6 @@
          1px -1px 0 #000,
          -1px 1px 0 #000,
           1px 1px 0 #000;
-        // text-shadow: 0px 0px 30px rgba($white, .5);
         z-index: $z_index_med;
 
         animation-name: show_menu;
@@ -57,6 +55,32 @@
         margin: 1rem 2rem;
         transform: scale(1);
         transition: all ease;
+        h1{
+            width: fit-content;
+            position: relative;
+        }
+        &:hover{
+            h1{
+                &:after{
+                    width: 100%;
+                }
+            }
+            
+        }
+
+        h1{
+            &:after{
+                @include before-after;
+                width: 0;
+                height: 3px;
+                bottom: -3px;
+                left: 0;
+                background-color: $white;
+                transition: width ease-in-out 250ms;
+            }
+        }
+
+       
     }
 
     &:hover{

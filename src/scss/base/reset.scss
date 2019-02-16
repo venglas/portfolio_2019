@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+*::before, *::after{
+    // content: '';
+
+}
 
 ol, ul {
     list-style-type: none;
