@@ -1,6 +1,13 @@
 .list{
     &__item{
         cursor: pointer;
+        transition: all ease-in-out 350ms;
+        &:hover{
+            transform: scale(1.02);
+            text-shadow: 2px 2px 30px rgba(rgb(218, 255, 255), .55);
+
+            color: $white;
+        }
     }
 
     &--page-menu{
@@ -9,7 +16,12 @@
         justify-content: space-around;
         opacity: 0;
         text-transform: uppercase;
-        text-shadow: 0px 0px 30px rgba($white, .5);
+        text-shadow:
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+         -1px 1px 0 #000,
+          1px 1px 0 #000;
+        // text-shadow: 0px 0px 30px rgba($white, .5);
         z-index: $z_index_med;
 
         animation-name: show_menu;
