@@ -4,11 +4,13 @@
       
       <section class="section section--projects">
         <SingleProject 
-          project_name="projekt pierwszy"
-          project_description="Projekt powstały we współpracy z firmą xyz oparty na technologiach takich jak vue, webpack czy babel."
-          img_1="../../static/img/sample.png"
-          img_2="../../static/img/sample2.png"
-          project_route="/cv" 
+          project_name="PRO8L3M virtual CD"
+          project_description='PO8L3M virtual CD jest to projekt inspirowany krąkiem muzycznym "Ground zero" duetu PRO8L3M.'
+          img_1="../../static/img/projects/problem_virtual_cd_2.png"
+          img_2="../../static/img/projects/problem_virtual_cd_1.png"
+          project_route="/cv"
+          project_live_link="https://venglas.github.io/PRO8L3eM/dist/index.html"
+          project_code_link="https://github.com/venglas/PRO8L3eM"
         ></SingleProject>
       </section>
     </article>

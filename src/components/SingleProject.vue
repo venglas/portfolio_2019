@@ -22,9 +22,9 @@
               </header>
 
               <article class="link-section">
-                <a href="" class="link">Zobacz projekt</a>
-                <a href="" class="link">Zobacz kod projektu</a>
-                <a href="" class="link">Dodaj do ulubionych</a>
+                <a v-bind:href="project_live_link" target="_blank" class="link">Zobacz projekt</a>
+                <a v-bind:href="project_code_link" target="_blank" class="link">Zobacz kod projektu</a>
+                <a class="link">Dodaj do ulubionych</a>
               </article>
 
             </div>
@@ -39,7 +39,7 @@
 
 export default {
   name: 'SingleProject',
-  props: ["project_name", "project_description", "img_1", "img_2", "project_route"],
+  props: ["project_name", "project_description", "img_1", "img_2", "project_route", "project_live_link", "project_code_link"],
   data: () => {
     return {
     }
