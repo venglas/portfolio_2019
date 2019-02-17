@@ -3,7 +3,13 @@
       <ViewHeader text="projekty"></ViewHeader>
       
       <section class="section section--projects">
-        <SingleProject></SingleProject>
+        <SingleProject 
+          project_name="projekt pierwszy"
+          project_description="Projekt powstały we współpracy z firmą xyz oparty na technologiach takich jak vue, webpack czy babel."
+          img_1="../../static/img/sample.png"
+          img_2="../../static/img/sample2.png"
+          project_route="/cv" 
+        ></SingleProject>
       </section>
     </article>
 </template>

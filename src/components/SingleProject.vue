@@ -7,7 +7,7 @@
                 <button class="button__control-panel button__control-panel--green"></button>
 
                 <span class="control-panel__title">
-                projekt pierwszy nazwa
+                    {{project_name}}
                 </span>
             </div>
         </header>
@@ -16,9 +16,9 @@
             <div class="overlay">
               <header class="overlay__header">
                 <h5 class="header">
-                  Projekt powstały we współpracy z firmą xyz oparty na technologiach takich jak vue, webpack czy babel.
+                  {{project_description}}
                 </h5>
-                <router-link class="read-more" to="/link projektu">Czytaj więcej...</router-link>
+                <router-link class="read-more" v-bind:to="project_route">Czytaj więcej...</router-link>
               </header>
 
               <article class="link-section">
@@ -29,8 +29,8 @@
 
             </div>
 
-            <img src="../assets/sample.png" alt="project img" class="img img--1">
-            <img src="../assets/sample2.png" alt="project img" class="img img--2">
+            <img v-bind:src="img_1" alt="project img" class="img img--1">
+            <img v-bind:src="img_2" alt="project img" class="img img--2">
         </div>
     </div>
 </template>
@@ -39,6 +39,7 @@
 
 export default {
   name: 'SingleProject',
+  props: ["project_name", "project_description", "img_1", "img_2", "project_route"],
   data: () => {
     return {
     }
