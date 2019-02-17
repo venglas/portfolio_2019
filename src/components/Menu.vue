@@ -43,20 +43,50 @@ export default {
             this.startButton.show = false;
         }, 1600); // 1500 cuz it's animation time
     },
+
     hideMenu(){
+        this.setActiveRoute();
+
         this.menu.hideMenu = true;
         setTimeout(() => {
             this.menu.leftSideMenu = true;
             this.menuAutoToggle();
         }, 1000)
     },
+
+    setActiveRoute(){
+        const scope = this;
+        function reset(){
+            for (let i = 0; i <= scope.menu.menu.children.length - 1; i++) {
+                scope.menu.menu.children[i].classList.remove('active_link');
+            }
+        }
+
+        switch(this.$router.app._route.name){
+            case 'projekty':
+                reset();
+                this.menu.menu.children[0].classList.add('active_link');
+            break;
+
+            case 'o mnie':
+                reset();
+                this.menu.menu.children[1].classList.add('active_link');
+            break;
+
+            case 'cv':
+                reset();
+                this.menu.menu.children[2].classList.add('active_link');
+            break;
+        }
+    },
+    
     menuAutoToggle(){
         if (this.menu.menuToggleTutorial === false) {
             this.menu.menuToggleTutorial = true;
             setTimeout(() => {
                 this.menu.menu.style.left = '0px';
                 setTimeout(() => {
-                    this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 20}px`;
+                    this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 17}px`;
                 }, 2000);
             }, 200);
         }
