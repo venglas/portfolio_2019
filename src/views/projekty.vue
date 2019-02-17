@@ -3,26 +3,48 @@
       <ViewHeader text="projekty"></ViewHeader>
       
       <section class="section section--projects">
+
         <div class="single-project" v-on:click="show_details">
-          <header>
-            <p>
-              nazwa projektu: troche kodu
-            </p>
-            <p>
-              data: 21.12.2018
-            </p>
+          
+          <header class="single-project__header">
+            <div class="control-panel">
+              <button class="button__control-panel button__control-panel--red"></button>
+              <button class="button__control-panel button__control-panel--yellow"></button>
+              <button class="button__control-panel button__control-panel--green"></button>
+
+              <span class="control-panel__title">
+                projekt pierwszy nazwa
+              </span>
+            </div>
           </header>
 
-          <div class="overlay">
-            kliknij po więcej szczegółów
+          <div class="single-project__img-holder">
+            <div class="overlay">
+              <header class="overlay__header">
+                <h5 class="header">
+                  Projekt powstały we współpracy z firmą xyz oparty na technologiach takich jak vue, webpack czy babel.
+                </h5>
+                <router-link class="read-more" to="/link projektu">Czytaj więcej...</router-link>
+              </header>
+
+              <article class="link-section">
+                <a href="" class="link">Zobacz projekt</a>
+                <a href="" class="link">Zobacz kod projektu</a>
+                <a href="" class="link">Dodaj do ulubionych</a>
+              </article>
+
+            </div>
+
+            <img src="../assets/sample.png" alt="project img" class="img img--1">
+            <img src="../assets/sample2.png" alt="project img" class="img img--2">
+            <!-- after hover there should be displaying other img of project -->
           </div>
+          
+          <!-- after hover on project square should diplaying lik for live project example, and basic technologies -->
 
-          <img src="../assets/sample.png" alt="project img" class="img img--project">
-
-          <footer>
-            11.11.2018
-          </footer>
+          
         </div>
+
       </section>
     </article>
 </template>
@@ -54,63 +76,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  .single-project{
-    width: 30rem;
-    height: auto;
-    position: relative;
-
-    footer{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      font-family: 'Libre Barcode 39 Text';
-      opacity: 0;
-      transition: all ease-in-out 400ms;
-      transform: scale(0);
-    }
-
-    header{
-      position: absolute;
-      top: 2rem;
-      left: 1rem;
-      opacity: 1
-    }
-
-    .img:hover ~ footer{
-      opacity: 1;
-      transform: scale(1)
-    }
-
-    .overlay:hover{
-      opacity: 1;
-    }
-
-    .overlay{
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-    }
-
-    .img{
-      transition: transform ease-in-out 500ms;
-      transition: opacity ease-in-out 600ms;
-      opacity: 0.5;
-      border: 1px solid white;
-
-       &:hover{
-        transform: scale(1.1);
-        opacity: 1;
-      }
-    }
-
-   
-  }
-</style>

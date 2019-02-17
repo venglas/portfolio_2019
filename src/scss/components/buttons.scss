@@ -26,6 +26,25 @@
             transition: all ease-in 300ms;
         }
     }
+
+    &__control-panel{
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0 3px;
+        border-radius: 50%;
+        border: 0;
+
+        &--red{
+            background-color: $macRed;
+        }
+        &--yellow{
+            background-color: $macYellow;
+        }
+        &--green{
+            background-color: $macGreen;
+        }
+    }
+
     body:hover &--start{
         transform: scale(1);
     }

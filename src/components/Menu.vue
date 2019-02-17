@@ -46,12 +46,19 @@ export default {
 
     hideMenu(){
         this.setActiveRoute();
+        // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
 
         this.menu.hideMenu = true;
         setTimeout(() => {
             this.menu.leftSideMenu = true;
             this.menuAutoToggle();
         }, 1000)
+    },
+
+    hideLeftSideMenu(){
+        if (this.menu.leftSideMenu === true) {
+            //here is place for code function which hide menu after clicking
+        }
     },
 
     setActiveRoute(){
@@ -79,7 +86,7 @@ export default {
             break;
         }
     },
-    
+
     menuAutoToggle(){
         if (this.menu.menuToggleTutorial === false) {
             this.menu.menuToggleTutorial = true;
