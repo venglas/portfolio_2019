@@ -1,12 +1,18 @@
 .section{
     &--project{
+
         .header{
             @include medium-space-desktop;
         }
 
         .content{
+            overflow-y: scroll;
+            height: 80vh;
+            width: 80%;
+            
             &__slider{
-                width: 80%;
+                @include small-space-desktop;
+                width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
 
@@ -14,8 +20,26 @@
                     transition: opacity ease-out 2000ms, transform  ease-in 750ms;
                     display: inline-block;
                 }
-                .project-img{
-                    display: inline-block;
+            }
+
+            &__description{
+                @include medium-space-desktop;
+                font-family: $basicText;
+
+                .list{
+                    @include medium-space-desktop;
+
+                    a{
+                        color: $white;
+                    }
+                    
+                    &__item{
+                        @include small-space-desktop;
+                        .icon{
+                            height: 1.8rem;
+                            margin: 0 0 -3px 4px;
+                        }
+                    }
                 }
             }
         }

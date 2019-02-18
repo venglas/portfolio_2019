@@ -1,7 +1,9 @@
 <template>
-    <article class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
+    <article class="view view--project" v-bind:style="{marginLeft: margin_left}">
       <ViewHeader text="PRO8L3M Virtual CD"></ViewHeader>
-      
+
+      <GoBackButton></GoBackButton>
+
       <article class="section section--project">
         <header class="header">
             PO8L3M virtual CD jest to projekt inspirowany krąkiem muzycznym "Ground zero" duetu PRO8L3M.
@@ -9,13 +11,40 @@
 
         <section class="content">
 
-            <ul class="content__slider" v-on:click="toggleSlider">
-                <li><img src="../../../static/img/projects/problem_virtual_cd_2.png" alt="zrzut ekranu 1" class="img project-img"></li>
-                <li><img src="../../../static/img/projects/problem_virtual_cd_1.png" alt="zrzut ekranu 2" class="img project-img"></li>
-                <li><img src="../../../static/img/projects/slide1.png" alt="zrzut ekranu 2" class="img project-img"></li>
-                <li><img src="../../../static/img/projects/slide2.png" alt="zrzut ekranu 2" class="img project-img"></li>
-                <li><img src="../../../static/img/projects/slide3.png" alt="zrzut ekranu 2" class="img project-img"></li>
-            </ul>
+            <ProjectSlider
+                img1="../../static/img/projects/problem-virtual-cd/problem_virtual_cd_2.png"
+                img2="../../static/img/projects/problem-virtual-cd/problem_virtual_cd_1.png"
+                img3="../../static/img/projects/problem-virtual-cd/slide1.png"
+                img4="../../static/img/projects/problem-virtual-cd/slide2.png"
+                img5="../../static/img/projects/problem-virtual-cd/slide3.png"
+            >
+            </ProjectSlider>
+
+            <div class="content__description">
+                PO8L3M virtual CD jest to projekt wirtualnej płyty muzycznej, która zawiera 27 utworów wraz z tekstami. <br>
+                Technologie jakie zostały użyte w projekcie to m.in: 
+                <ul class="list">
+                    <li class="list__item">
+                        <a href="https://www.w3.org/TR/html52/" target="_blank">HTML5</a>
+                        <img src="../../assets/img/icons/html5.png" alt="html5 icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://www.ecma-international.org/ecma-262/6.0/" target="_blank">ES6</a>
+                        <img src="../../assets/img/icons/js.png" alt="javascript icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://sass-lang.com/" target="_blank">SCSS</a>
+                        <img src="../../assets/img/icons/sass.png" alt="javascript icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://parceljs.org/" target="_blank">Parcel</a>
+                        <img src="../../assets/img/icons/parcel.png" alt="javascript icon" class="img icon">
+                    </li>
+                </ul>
+            </div>
 
         </section>
       </article>
@@ -24,21 +53,15 @@
 
 <script>
 import ViewHeader from '../../components/ViewHeader';
-import { setInterval, clearInterval } from 'timers';
-import { constants } from 'fs';
+import ProjectSlider from '../../components/ProjectSlider';
+import GoBackButton from '../../components/GoBackButton';
 
 export default {
   name: 'problemVirtualCd',
-  components: {ViewHeader},
+  components: {ViewHeader, ProjectSlider, GoBackButton},
   data: () => {
     return {
         margin_left: '180px',
-        slider:{
-            counter: 0,
-            slider_instance: null,
-            time_space: 2000,
-            isRun: true
-        }
     }
   },
   mounted(){
@@ -47,48 +70,9 @@ export default {
         this.margin_left = `${this.$store.state.interface.menu_width}`;
       }, 200);
     });
-
-    this.startSlider();
   },
 
   methods: {
-    startSlider(){
-        const slides = document.querySelector('.content__slider').children;
-
-        setTimeout(()=>{
-            this.slider.slider_instance = setInterval(() => {
-
-                if ( this.slider.counter < slides.length - 1) {
-                    slides[this.slider.counter + 1].style.transform = `translateX(-${101*(this.slider.counter+1)}%)`;
-                }
-                slides[this.slider.counter].style.opacity = "0";
-
-                this.slider.counter++;
-
-                if ( this.slider.counter >= slides.length ) {
-                    this.slider.counter = 0;
-
-                    for (let i = 0; i <= slides.length-1; i++) {
-                        slides[i].style.transform = "translateX(0)";
-                        slides[i].style.opacity = "1";
-                    }
-                }
-
-            }, this.slider.time_space);
-
-            console.log(this.slider.slider_instance)
-        }, 500);
-    },
-
-    toggleSlider(){
-        if ( this.slider.isRun === true ){
-            clearInterval( this.slider.slider_instance );
-            this.slider.isRun = false;
-        } else if ( this.slider.isRun === false ){
-            this.startSlider();
-            this.slider.isRun = true;
-        }
-    }
   }
 }
 </script>

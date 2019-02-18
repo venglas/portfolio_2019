@@ -49,4 +49,13 @@
     body:hover &--start{
         transform: scale(1);
     }
+
+    &--go-back{
+        background-color: transparent;
+        filter: brightness(0) invert(1);
+        border: none;
+        .img{
+            height: 2rem;
+        }
+    }
 }

@@ -1,13 +1,4 @@
 .list{
-    &__item{
-        cursor: pointer;
-        transition: all ease-in-out 250ms;
-        &:hover{
-            transform: scale(1.02);
-            text-shadow: 2px 2px 30px rgba(rgb(218, 255, 255), .55);
-            color: $white;
-        }
-    }
 
     &--page-menu{
         width: 100%;
@@ -27,6 +18,16 @@
         animation-delay: 100ms;
         animation-fill-mode: forwards;
         animation-timing-function: ease;
+
+        .list__item{
+            cursor: pointer;
+            transition: all ease-in-out 250ms;
+            &:hover{
+                transform: scale(1.02);
+                text-shadow: 2px 2px 30px rgba(rgb(218, 255, 255), .55);
+                color: $white;
+            }
+        }
     }
 }
 
