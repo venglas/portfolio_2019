@@ -9,7 +9,7 @@
 
         <section class="content">
 
-            <ul class="content__slider">
+            <ul class="content__slider" v-on:click="toggleSlider">
                 <li><img src="../../../static/img/projects/problem_virtual_cd_2.png" alt="zrzut ekranu 1" class="img project-img"></li>
                 <li><img src="../../../static/img/projects/problem_virtual_cd_1.png" alt="zrzut ekranu 2" class="img project-img"></li>
                 <li><img src="../../../static/img/projects/slide1.png" alt="zrzut ekranu 2" class="img project-img"></li>
@@ -24,7 +24,7 @@
 
 <script>
 import ViewHeader from '../../components/ViewHeader';
-import { setInterval } from 'timers';
+import { setInterval, clearInterval } from 'timers';
 import { constants } from 'fs';
 
 export default {
@@ -36,7 +36,8 @@ export default {
         slider:{
             counter: 0,
             slider_instance: null,
-            time_space: 5000
+            time_space: 2000,
+            isRun: true
         }
     }
   },
@@ -47,33 +48,47 @@ export default {
       }, 200);
     });
 
-    const slides = document.querySelector('.content__slider').children;
-
-    setTimeout(()=>{
-        this.slider_instance = setInterval(() => {
-
-            if ( this.slider.counter < slides.length - 1) {
-                slides[this.slider.counter + 1].style.transform = `translateX(-${101*(this.slider.counter+1)}%)`;
-            }
-            slides[this.slider.counter].style.opacity = "0";
-
-            this.slider.counter++;
-
-            if ( this.slider.counter >= slides.length ) {
-                this.slider.counter = 0;
-
-                for (let i = 0; i <= slides.length-1; i++) {
-                    slides[i].style.transform = "translateX(0)";
-                    slides[i].style.opacity = "1";
-                }
-            }
-
-        }, this.slider.time_space);
-    }, 500);
-
+    this.startSlider();
   },
 
   methods: {
+    startSlider(){
+        const slides = document.querySelector('.content__slider').children;
+
+        setTimeout(()=>{
+            this.slider.slider_instance = setInterval(() => {
+
+                if ( this.slider.counter < slides.length - 1) {
+                    slides[this.slider.counter + 1].style.transform = `translateX(-${101*(this.slider.counter+1)}%)`;
+                }
+                slides[this.slider.counter].style.opacity = "0";
+
+                this.slider.counter++;
+
+                if ( this.slider.counter >= slides.length ) {
+                    this.slider.counter = 0;
+
+                    for (let i = 0; i <= slides.length-1; i++) {
+                        slides[i].style.transform = "translateX(0)";
+                        slides[i].style.opacity = "1";
+                    }
+                }
+
+            }, this.slider.time_space);
+
+            console.log(this.slider.slider_instance)
+        }, 500);
+    },
+
+    toggleSlider(){
+        if ( this.slider.isRun === true ){
+            clearInterval( this.slider.slider_instance );
+            this.slider.isRun = false;
+        } else if ( this.slider.isRun === false ){
+            this.startSlider();
+            this.slider.isRun = true;
+        }
+    }
   }
 }
 </script>
