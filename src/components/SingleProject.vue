@@ -1,5 +1,5 @@
 <template>
-    <div class="single-project" v-on:click="show_details">
+    <div class="single-project">
         <header class="single-project__header">
             <div class="control-panel">
                 <button class="button__control-panel button__control-panel--red"></button>
@@ -8,6 +8,10 @@
 
                 <span class="control-panel__title">
                     {{project_name}}
+                </span>
+
+                <span class="favourite" v-show="isFavourite">
+                  <img src="../assets/img/icons/star.png" alt="ulubiony" title="Ulubiony projekt">
                 </span>
             </div>
         </header>
@@ -24,7 +28,9 @@
               <article class="link-section">
                 <a v-bind:href="project_live_link" target="_blank" class="link">Zobacz projekt</a>
                 <a v-bind:href="project_code_link" target="_blank" class="link">Zobacz kod projektu</a>
-                <a class="link">Dodaj do ulubionych</a>
+                
+                <a class="link" v-on:click="favourite" v-show="!isFavourite">Dodaj do ulubionych</a>
+                <a class="link" v-on:click="removeFavourite" v-show="isFavourite">Usuń z ulubionych</a>
               </article>
 
             </div>
@@ -42,13 +48,52 @@ export default {
   props: ["project_name", "project_description", "img_1", "img_2", "project_route", "project_live_link", "project_code_link"],
   data: () => {
     return {
+      isFavourite: false
     }
   },
   mounted(){
+    this.checkFavouriteAndAdd();
   },
 
   methods: {
-   
+   favourite(){ 
+    if ( localStorage.getItem('favourites') === null ) {
+      localStorage.setItem('favourites', JSON.stringify([this.project_name]) )
+    } else {
+      let data = JSON.parse( localStorage.getItem('favourites') );
+
+      data.push(this.project_name);
+      let cleared = [...new Set(data)]
+
+      localStorage.setItem('favourites', JSON.stringify(cleared) );
+    }
+
+    this.checkFavouriteAndAdd();
+   },
+
+   checkFavouriteAndAdd(){
+    const data = JSON.parse( localStorage.getItem('favourites') );
+
+    data.forEach(el => {
+      if( el === this.project_name ) {
+        this.isFavourite = true;
+      }
+    });
+   },
+
+   removeFavourite(){
+     const data = JSON.parse( localStorage.getItem('favourites') );
+
+     console.log(data)
+     data.forEach( (el, i) => {
+       if( el === this.project_name ){
+         data.splice(i, 1);
+       }
+     });
+
+     this.isFavourite = false;
+     localStorage.setItem('favourites', JSON.stringify( data ) );
+   }
   }
 }
 </script>
