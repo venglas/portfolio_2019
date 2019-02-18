@@ -12,9 +12,9 @@
         <section class="content">
 
             <ProjectSlider
-                img1="../../static/img/projects/problem-virtual-cd/slide1.png"
-                img2="../../static/img/projects/problem-virtual-cd/slide2.png"
-                img3="../../static/img/projects/problem-virtual-cd/slide3.png"
+                img1="../../static/img/projects/canvas-pong-game/slide1.png"
+                img2="../../static/img/projects/canvas-pong-game/slide2.png"
+                :img3="false"
                 :img4="false"
                 :img5="false"
             >

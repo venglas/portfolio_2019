@@ -16,11 +16,11 @@
         <SingleProject 
           project_name="Canvas pong game"
           project_description='Canvas pong game jest prostą grą napisaną w javaScript.'
-          img_1="../../static/img/projects/problem-virtual-cd/slide2.png"
-          img_2="../../static/img/projects/problem-virtual-cd/slide1.png"
-          project_route="/problem-virtual-cd"
-          project_live_link="https://venglas.github.io/PRO8L3eM/dist/index.html"
-          project_code_link="https://github.com/venglas/PRO8L3eM"
+          img_1="../../static/img/projects/canvas-pong-game/slide1.png"
+          img_2="../../static/img/projects/canvas-pong-game/slide2.png"
+          project_route="/canvas-pong-game"
+          project_live_link="https://venglas.github.io/canvas_pong_game/"
+          project_code_link="https://github.com/venglas/canvas_pong_game"
         ></SingleProject>
 
       </section>

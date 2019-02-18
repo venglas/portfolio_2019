@@ -6,6 +6,7 @@ import oMnie from '@/views/oMnie'
 import cv from '@/views/cv'
 
 import problemVirtualCd from '@/views/projects/problemVirtualCd';
+import canvasPongGame from '@/views/projects/canvasPongGame';
 
 Vue.use(Router)
 
@@ -34,6 +35,12 @@ export default new Router({
       path: '/problem-virtual-cd',
       name: 'problemVirtualCd',
       component: problemVirtualCd
+    },
+
+    {
+      path: '/canvas-pong-game',
+      name: 'canvasPongGame',
+      component: canvasPongGame
     }
   ]
 })
