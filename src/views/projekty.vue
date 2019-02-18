@@ -8,7 +8,7 @@
           project_description='PO8L3M virtual CD jest to projekt inspirowany krąkiem muzycznym "Ground zero" duetu PRO8L3M.'
           img_1="../../static/img/projects/problem_virtual_cd_2.png"
           img_2="../../static/img/projects/problem_virtual_cd_1.png"
-          project_route="/cv"
+          project_route="/problem-virtual-cd"
           project_live_link="https://venglas.github.io/PRO8L3eM/dist/index.html"
           project_code_link="https://github.com/venglas/PRO8L3eM"
         ></SingleProject>

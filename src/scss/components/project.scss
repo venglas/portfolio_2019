@@ -1,0 +1,23 @@
+.section{
+    &--project{
+        .header{
+            @include medium-space-desktop;
+        }
+
+        .content{
+            &__slider{
+                width: 80%;
+                white-space: nowrap;
+                overflow: hidden;
+
+                li{
+                    transition: opacity ease-out 2000ms, transform  ease-in 750ms;
+                    display: inline-block;
+                }
+                .project-img{
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

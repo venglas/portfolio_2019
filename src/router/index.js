@@ -5,6 +5,8 @@ import projekty from '@/views/projekty'
 import oMnie from '@/views/oMnie'
 import cv from '@/views/cv'
 
+import problemVirtualCd from '@/views/projects/problemVirtualCd';
+
 Vue.use(Router)
 
 export default new Router({
@@ -25,6 +27,13 @@ export default new Router({
       path: '/cv',
       name: 'cv',
       component: cv
+    },
+
+    //projects:
+    {
+      path: '/problem-virtual-cd',
+      name: 'problemVirtualCd',
+      component: problemVirtualCd
     }
   ]
 })
