@@ -2,7 +2,7 @@
     <header class="header header--page">
         <nav class="nav nav--page" v-show="menu.show">
             <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : menu.hideMenu, leftSideMenu : menu.leftSideMenu}">
-                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu()">
+                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
                     <h1>{{item.name}}</h1>
                 </li>
             </ul>
@@ -44,12 +44,14 @@ export default {
         }, 1600); // 1500 cuz it's animation time
     },
 
-    hideMenu(){
+    hideMenu(e){
         this.setActiveRoute();
         // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
+        e.target.parentElement.style.pointerEvents = 'none';
 
         this.menu.hideMenu = true;
         setTimeout(() => {
+            e.target.parentElement.style.pointerEvents = 'auto';
             this.menu.leftSideMenu = true;
             this.menuAutoToggle();
         }, 1000)
