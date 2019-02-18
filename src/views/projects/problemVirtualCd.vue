@@ -65,11 +65,6 @@ export default {
     }
   },
   mounted(){
-    window.addEventListener('resize', () => {
-      setTimeout(() => {
-        this.margin_left = `${this.$store.state.interface.menu_width}`;
-      }, 200);
-    });
   },
 
   methods: {

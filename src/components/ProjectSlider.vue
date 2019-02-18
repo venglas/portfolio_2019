@@ -1,11 +1,18 @@
 <template>
-     <ul class="content__slider" v-on:click="toggleSlider">
-        <li><img v-bind:src="img1" alt="zrzut ekranu 1" class="img project-img"></li>
-        <li><img v-bind:src="img2" alt="zrzut ekranu 2" class="img project-img"></li>
-        <li><img v-bind:src="img3" alt="zrzut ekranu 3" class="img project-img"></li>
-        <li><img v-bind:src="img4" alt="zrzut ekranu 4" class="img project-img"></li>
-        <li><img v-bind:src="img5" alt="zrzut ekranu 5" class="img project-img"></li>
-    </ul>
+    <div>
+        <!-- <div class="player">
+            <img src="../assets/img/icons/play-button.png" alt="play button" class="img" v-show="isRun">
+            <img src="../assets/img/icons/pause-button.png" alt="pause button" class="img" v-show="!isRun">
+        </div> -->
+
+        <ul class="content__slider" v-on:click="toggleSlider">
+            <li><img v-bind:src="img1" alt="zrzut ekranu 1" class="img project-img"></li>
+            <li><img v-bind:src="img2" alt="zrzut ekranu 2" class="img project-img"></li>
+            <li><img v-bind:src="img3" alt="zrzut ekranu 3" class="img project-img"></li>
+            <li><img v-bind:src="img4" alt="zrzut ekranu 4" class="img project-img"></li>
+            <li><img v-bind:src="img5" alt="zrzut ekranu 5" class="img project-img"></li>
+        </ul>
+    </div>
 </template>
 
 <script>

@@ -10,11 +10,22 @@
             height: 80vh;
             width: 80%;
             
+            // .player{
+            //     position: absolute;
+            //     filter: brightness(0) invert(1);
+            //     top: 50%;
+            //     left: 50%;
+            //     transform: translate(-50%, -50%);
+            //     z-index: $z_index_max;
+            // }
+
             &__slider{
                 @include small-space-desktop;
                 width: 100%;
                 white-space: nowrap;
                 overflow: hidden;
+                position: relative;
+
 
                 li{
                     transition: opacity ease-out 2000ms, transform  ease-in 750ms;
