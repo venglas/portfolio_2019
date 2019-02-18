@@ -1,6 +1,7 @@
 .single-project{
     width: 40rem;
     opacity: .85;
+    @include big-space-desktop;
     transition: opacity ease-in-out 200ms;
 
     &:hover{
@@ -9,6 +10,7 @@
 
     &__header{
         z-index: $z_index_max;
+        position: relative;
 
         .control-panel{
             background-color: $macBarGray;

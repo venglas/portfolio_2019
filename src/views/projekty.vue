@@ -6,12 +6,23 @@
         <SingleProject 
           project_name="PRO8L3M virtual CD"
           project_description='PO8L3M virtual CD jest to projekt inspirowany krąkiem muzycznym "Ground zero" duetu PRO8L3M.'
-          img_1="../../static/img/projects/problem_virtual_cd_2.png"
-          img_2="../../static/img/projects/problem_virtual_cd_1.png"
+          img_1="../../static/img/projects/problem-virtual-cd/slide2.png"
+          img_2="../../static/img/projects/problem-virtual-cd/slide1.png"
           project_route="/problem-virtual-cd"
           project_live_link="https://venglas.github.io/PRO8L3eM/dist/index.html"
           project_code_link="https://github.com/venglas/PRO8L3eM"
         ></SingleProject>
+
+        <SingleProject 
+          project_name="Canvas pong game"
+          project_description='Canvas pong game jest prostą grą napisaną w javaScript.'
+          img_1="../../static/img/projects/problem-virtual-cd/slide2.png"
+          img_2="../../static/img/projects/problem-virtual-cd/slide1.png"
+          project_route="/problem-virtual-cd"
+          project_live_link="https://venglas.github.io/PRO8L3eM/dist/index.html"
+          project_code_link="https://github.com/venglas/PRO8L3eM"
+        ></SingleProject>
+
       </section>
     </article>
 </template>
