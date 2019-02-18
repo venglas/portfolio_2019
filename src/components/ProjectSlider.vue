@@ -26,7 +26,7 @@ export default {
             counter: 0,
             slider_instance: null,
             slider_length: 0,
-            time_space: 5000,
+            time_space: 3000,
             isRun: true
         }
     }
@@ -61,7 +61,7 @@ export default {
 
             }, this.slider.time_space);
 
-        }, 500);
+        }, 150);
     },
 
     toggleSlider(){

@@ -105,8 +105,6 @@ export default {
     menu.push( this.$router.options.routes[0] );
     menu.push( this.$router.options.routes[1] );
     menu.push( this.$router.options.routes[2] );
-
-    console.log('routes: ', this.$router.options.routes[0]);
     
     this.menu.routes = menu;
   },
