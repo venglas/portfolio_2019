@@ -29,9 +29,7 @@ export default {
     },
 
     check_route(){
-      if (this.$store.state.all_routes.includes(  this.$router.currentRoute.path ) ) {
-        // here is a good route cuz do nothing
-      } else {
+      if (!this.$store.state.all_routes.includes(  this.$router.currentRoute.path ) ) {
         this.$router.push('/404')
       }
     }
@@ -50,7 +48,6 @@ export default {
     $route(){
       this.check_route();
     }
-    
   }
 }
 </script>
