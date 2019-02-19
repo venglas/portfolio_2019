@@ -26,7 +26,31 @@ export default {
     },
     hide_logo(){
       this.$store.commit('interface_hide');
+    },
+
+    check_route(){
+      if (this.$store.state.all_routes.includes(  this.$router.currentRoute.path ) ) {
+        // here is a good route cuz do nothing
+      } else {
+        this.$router.push('/404')
+      }
     }
+  },
+
+  created(){
+    let all_routes = ['/'];
+    this.$router.options.routes.forEach(element => {
+      all_routes.push(element.path)
+    });
+
+    this.$store.commit('set_all_routes', all_routes);
+  },
+
+  watch: {
+    $route(){
+      this.check_route();
+    }
+    
   }
 }
 </script>

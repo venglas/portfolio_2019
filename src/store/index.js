@@ -10,7 +10,8 @@ const store = new Vuex.Store({
         interface: {
             is_on: false,
             menu_width: 0
-        }
+        },
+        all_routes: []
     },
 
     mutations: {
@@ -22,6 +23,10 @@ const store = new Vuex.Store({
         },
         set_menu_width(state, width){
             state.interface.menu_width = width;
+        },
+
+        set_all_routes(state, all_routes){
+            state.all_routes = all_routes;
         }
     }
 });
