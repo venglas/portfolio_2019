@@ -7,6 +7,7 @@ import cv from '@/views/cv'
 
 import problemVirtualCd from '@/views/projects/problemVirtualCd';
 import canvasPongGame from '@/views/projects/canvasPongGame';
+import odkurzaCzary from '@/views/projects/odkurzaCzary';
 
 import route404 from '@/views/404';
 
@@ -43,6 +44,12 @@ export default new Router({
       path: '/canvas-pong-game',
       name: 'canvasPongGame',
       component: canvasPongGame
+    },
+
+    {
+      path: '/odkurza-czary',
+      name: 'odkurzaCzary',
+      component: odkurzaCzary
     },
 
     // 404
