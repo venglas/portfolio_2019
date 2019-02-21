@@ -37,6 +37,10 @@
                 margin-bottom: 3rem;
                 font-family: $basicText;
 
+                .text{
+                    @include small-space-desktop;
+                }
+
                 .list{
                     @include medium-space-desktop;
 
