@@ -4,13 +4,20 @@
 
       <article class="article article--about-me">
         <header class="header">
-          Zajmuję się kodowaniem stron internetowych oraz aplikacji. <br>
-          Główną biblioteką z której korzystam przy tworzeniu stron i aplikacji to Vue.js
-          <img src="../assets/img/icons/vue.png" alt="vue js icon" class="img">
+          <h4>
+              Zajmuję się kodowaniem stron internetowych oraz aplikacji. <br>
+              Główną biblioteką z której korzystam przy tworzeniu stron i aplikacji to Vue.js
+              <img src="../assets/img/icons/vue.png" alt="vue js icon" class="img">
+          </h4>
+         
         </header>
 
         <section class="content">
-          
+          technologie których uzywam:
+          <div>
+            HTM5
+            <img src="../assets/img/icons/html5.png" alt="">
+          </div>
         </section>
       </article>
     </div>
@@ -43,6 +50,7 @@ export default {
       .header{
         display: flex;
         align-items: center;
+        margin-bottom: 3rem;
 
         .img{
           width: 4rem;
@@ -59,6 +67,12 @@ export default {
           100%{
             transform: rotateY(360deg)
           }
+        }
+      }
+
+      .content{
+        div{
+          background-color: aquamarine;
         }
       }
     }
