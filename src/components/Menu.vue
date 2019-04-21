@@ -1,7 +1,7 @@
 <template>
     <header class="header header--page">
-        <nav class="nav nav--page" v-show="menu.show">
-            <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : menu.hideMenu, leftSideMenu : menu.leftSideMenu}">
+        <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible">
+            <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : !$store.state.interface.menu.isVisible, leftSideMenu : $store.state.interface.menu.left_side_menu}">
                 <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
                     <h1>{{item.name}}</h1>
                 </li>
@@ -23,9 +23,9 @@ export default {
         menu: {
             menu: null, // in mounted put there html element
             routes: [],
-            show: true,
+            // show: true,
             hideMenu: false,
-            leftSideMenu: false,
+            // leftSideMenu: false,
             menuToggleTutorial: false
         },
         // startButton: {
@@ -48,11 +48,13 @@ export default {
         this.setActiveRoute(); // show us where we' re in smaller vertical menu via underlined the link
         // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
         e.target.parentElement.style.pointerEvents = 'none';
+        
+        this.$store.commit('hide_horizontal_menu');
 
-        this.menu.hideMenu = true;
         setTimeout(() => {
             e.target.parentElement.style.pointerEvents = 'auto';
-            this.menu.leftSideMenu = true;
+            // this.menu.leftSideMenu = true;
+            this.$store.commit('show_left_side_menu');
             this.menuAutoToggle();
         }, 1000)
     },
@@ -71,21 +73,23 @@ export default {
             }
         }
 
-        switch(this.$router.app._route.name){
-            case 'projekty':
-                reset();
-                this.menu.menu.children[0].classList.add('active_link');
-            break;
+        if (this.$store.state.interface.menu.isVisible === "false") {
+            switch(this.$router.app._route.name){
+                case 'projekty':
+                    reset();
+                    this.menu.menu.children[0].classList.add('active_link');
+                break;
 
-            case 'o mnie':
-                reset();
-                this.menu.menu.children[1].classList.add('active_link');
-            break;
+                case 'o mnie':
+                    reset();
+                    this.menu.menu.children[1].classList.add('active_link');
+                break;
 
-            case 'cv':
-                reset();
-                this.menu.menu.children[2].classList.add('active_link');
-            break;
+                case 'cv':
+                    reset();
+                    this.menu.menu.children[2].classList.add('active_link');
+                break;
+            }
         }
     },
 

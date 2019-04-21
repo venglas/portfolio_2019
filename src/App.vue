@@ -37,7 +37,8 @@ export default {
 
     show_horizontal_menu(){
       if ( this.$route.path === '/') {
-        //show horizontal menu
+        this.$store.commit('show_horizontal_menu');
+        this.$store.commit('hide_left_side_menu');
       }
     }
   },
