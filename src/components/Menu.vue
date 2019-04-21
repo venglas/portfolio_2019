@@ -1,7 +1,7 @@
 <template>
     <header class="header header--page">
         <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible">
-            <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : !$store.state.interface.menu.isVisible, leftSideMenu : $store.state.interface.menu.left_side_menu}">
+            <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : $store.state.interface.menu.left_side_menu, leftSideMenu : $store.state.interface.menu.left_side_menu}">
                 <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
                     <h1>{{item.name}}</h1>
                 </li>
@@ -49,13 +49,13 @@ export default {
         // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
         e.target.parentElement.style.pointerEvents = 'none';
         
-        this.$store.commit('hide_horizontal_menu');
+        // this.$store.commit('hide_horizontal_menu');
 
         setTimeout(() => {
             e.target.parentElement.style.pointerEvents = 'auto';
             // this.menu.leftSideMenu = true;
             this.$store.commit('show_left_side_menu');
-            this.menuAutoToggle();
+            // this.menuAutoToggle();
         }, 1000)
     },
 
@@ -93,17 +93,21 @@ export default {
         }
     },
 
-    menuAutoToggle(){
-        if (this.menu.menuToggleTutorial === false) {
-            this.menu.menuToggleTutorial = true;
-            setTimeout(() => {
-                this.menu.menu.style.left = '0px';
-                setTimeout(() => {
-                    this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 17}px`;
-                }, 2000);
-            }, 200);
-        }
-    }
+    // menuAutoToggle(){
+    //     if (this.menu.menuToggleTutorial === false) {
+    //         this.menu.menuToggleTutorial = true;
+    //         setTimeout(() => {
+    //             this.menu.menu.style.left = '0px';
+    //             setTimeout(() => {
+    //                 this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 17}px`;
+    //             }, 2000);
+    //         }, 200);
+    //     }
+    // }
+
+    // autoShowLeftSideMenu(){
+
+    // }
   },
 
   created(){
@@ -118,7 +122,7 @@ export default {
     
     window.addEventListener('resize', () => {
         setTimeout(() => {
-            console.log(`${this.menu.menu.offsetWidth + 25}px`)
+            // console.log(`${this.menu.menu.offsetWidth + 25}px`)
             this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` );
         }, 500);
     });
