@@ -8,9 +8,9 @@
             </ul>
         </nav>
 
-        <button class="button button--start" v-on:click="start_button" v-show="startButton.show" v-bind:class="{hideStartButton : startButton.hideStartButtonClass}">
+        <!-- <button class="button button--start" v-on:click="start_button" v-show="startButton.show" v-bind:class="{hideStartButton : startButton.hideStartButtonClass}">
             start
-        </button>
+        </button> -->
     </header>
 </template>
 
@@ -23,29 +23,29 @@ export default {
         menu: {
             menu: null, // in mounted put there html element
             routes: [],
-            show: false,
+            show: true,
             hideMenu: false,
             leftSideMenu: false,
             menuToggleTutorial: false
         },
-        startButton: {
-            show: true,
-            hideStartButtonClass: false,
-        }
+        // startButton: {
+        //     show: true,
+        //     hideStartButtonClass: false,
+        // }
     }
   },
 
   methods: {
-    start_button(){
-        this.menu.show = true;
-        this.startButton.hideStartButtonClass = true;
-        setTimeout(() => {
-            this.startButton.show = false;
-        }, 1600); // 1500 cuz it's animation time
-    },
+    // start_button(){
+    //     this.menu.show = true;
+    //     this.startButton.hideStartButtonClass = true;
+    //     setTimeout(() => {
+    //         this.startButton.show = false;
+    //     }, 1600); // 1500 cuz it's animation time
+    // },
 
     hideMenu(e){
-        this.setActiveRoute();
+        this.setActiveRoute(); // show us where we' re in smaller vertical menu via underlined the link
         // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
         e.target.parentElement.style.pointerEvents = 'none';
 
@@ -104,9 +104,7 @@ export default {
 
   created(){
     let menu = [];
-    menu.push( this.$router.options.routes[0] );
-    menu.push( this.$router.options.routes[1] );
-    menu.push( this.$router.options.routes[2] );
+    menu.push( this.$router.options.routes[0], this.$router.options.routes[2]);
     
     this.menu.routes = menu;
   },

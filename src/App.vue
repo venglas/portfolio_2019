@@ -24,6 +24,7 @@ export default {
     show_logo(){
       this.$store.commit('interface_show');
     },
+
     hide_logo(){
       this.$store.commit('interface_hide');
     },
@@ -31,6 +32,12 @@ export default {
     check_route(){
       if (!this.$store.state.all_routes.includes(  this.$router.currentRoute.path ) ) {
         this.$router.push('/404')
+      }
+    },
+
+    show_horizontal_menu(){
+      if ( this.$route.path === '/') {
+        //show horizontal menu
       }
     }
   },
@@ -47,7 +54,9 @@ export default {
   watch: {
     $route(){
       this.check_route();
+      this.show_horizontal_menu();
     }
+    
   }
 }
 </script>
