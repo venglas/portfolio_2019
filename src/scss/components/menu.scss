@@ -32,6 +32,10 @@
 }
 
 .hideHorizontalMenu{
+    // animation-name: opacity_1_to_0;
+    // animation-duration: 1s;
+    // animation-fill-mode: forwards;
+
     .list__item{
         transform: scale(0);
         transition: all ease-out 1000ms;
@@ -47,6 +51,10 @@
     position: absolute;
     // left: -100px;
     transition: all ease 1500ms;
+
+    animation-name: opacity_0_to_1;
+    animation-duration: 900ms;
+    animation-fill-mode: forwards;
 
     .list__item{
         margin: 1rem 2rem;

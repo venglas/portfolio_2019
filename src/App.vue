@@ -20,9 +20,14 @@ import Logo from './components/Logo';
 export default {
   name: 'App',
   components: {Background, Menu, Logo},
+  data:() => {
+    return{
+      start_route: ''
+    }
+  },
   methods: {
     show_logo(){
-      this.$store.commit('interface_show');
+      this.$store.commit('interface_show'); // this can't be a commit via store 
     },
 
     hide_logo(){
@@ -40,6 +45,15 @@ export default {
         this.$store.commit('show_horizontal_menu');
         this.$store.commit('hide_left_side_menu');
       }
+    },
+
+    checkStartRoute(){
+      this.start_route = this.$route.path;
+
+      if (this.start_route !== '/'){
+        // this.$store.commit('hide_horizontal_menu');
+        this.$store.commit('show_left_side_menu');        
+      }
     }
   },
 
@@ -50,6 +64,8 @@ export default {
     });
 
     this.$store.commit('set_all_routes', all_routes);
+
+    this.checkStartRoute();
   },
 
   watch: {
@@ -57,7 +73,6 @@ export default {
       this.check_route();
       this.show_horizontal_menu();
     }
-    
   }
 }
 </script>

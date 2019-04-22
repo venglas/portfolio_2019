@@ -48,15 +48,11 @@ export default {
         this.setActiveRoute(); // show us where we' re in smaller vertical menu via underlined the link
         // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
         e.target.parentElement.style.pointerEvents = 'none';
-        
-        // this.$store.commit('hide_horizontal_menu');
 
         setTimeout(() => {
             e.target.parentElement.style.pointerEvents = 'auto';
-            // this.menu.leftSideMenu = true;
             this.$store.commit('show_left_side_menu');
-            // this.menuAutoToggle();
-        }, 1000)
+        }, 500)
     },
 
     hideLeftSideMenu(){
