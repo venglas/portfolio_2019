@@ -108,7 +108,7 @@ export default {
 
   created(){
     let menu = [];
-    menu.push( this.$router.options.routes[0], this.$router.options.routes[2]);
+    menu.push( this.$router.options.routes[0], this.$router.options.routes[2], this.$router.options.routes[3]);
     
     this.menu.routes = menu;
   },

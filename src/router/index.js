@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import projekty from '@/views/projekty'
 import oMnie from '@/views/oMnie'
 import cv from '@/views/cv'
+import kontakt from '@/views/kontakt'
 
 import problemVirtualCd from '@/views/projects/problemVirtualCd';
 import canvasPongGame from '@/views/projects/canvasPongGame';
@@ -31,6 +32,12 @@ export default new Router({
       path: '/cv',
       name: 'cv',
       component: cv
+    },
+
+    {
+      path: '/kontakt',
+      name: 'kontakt',
+      component: kontakt
     },
 
     //projects:
