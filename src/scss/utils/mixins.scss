@@ -14,12 +14,21 @@
 
 //
 
+@mixin extra-small-bottom-space {
+    margin-bottom: .5rem;
+}
+
 @mixin small-bottom-space {
     margin-bottom: 1rem;
 }
 
 @mixin medium-bottom-space {
     margin-bottom: 2rem;
+}
+
+
+@mixin big-bottom-space {
+    margin-bottom: 3.5rem;
 }
 
 // before, after

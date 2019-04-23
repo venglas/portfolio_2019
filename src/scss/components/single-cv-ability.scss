@@ -1,0 +1,19 @@
+// <div class="single-ability">
+//     <label for="ability" class="single-ability__name">{{ability_name}}</label>
+//     <progress id="ability" max="100" v-bind:value="ability_value" class="single-ability__value"> {{ability_value}}% </progress>
+// </div>
+
+.single-ability{
+    @include small-bottom-space;
+
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+
+    &__name{
+        text-transform: uppercase;
+    }
+    &__value{
+        align-self: flex-end;
+    }
+}

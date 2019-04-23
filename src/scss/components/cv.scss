@@ -1,0 +1,46 @@
+.article-cv{
+    padding-bottom: 5rem; //fix height
+
+    &__header{
+        @include big-bottom-space;
+
+        .name{
+            // @include small-bottom-space;
+        }
+        .role{
+            @include small-bottom-space;
+        }
+        .basics-info{
+            &__item{
+                .link{}
+            }
+        }
+    }
+
+    &__info-block{
+        @include big-bottom-space;
+
+        .header{
+            @include medium-bottom-space;
+        }
+
+        &--experience{
+            .item{
+                &__firm-name{
+                    @include extra-small-bottom-space;
+                }
+                &__work-time{
+                    @include extra-small-bottom-space;
+                }
+                &__position-name{
+                    @include medium-bottom-space;
+                }
+            }
+        }
+    }
+
+    &__download-section{
+        .info{}
+        .button{}
+    }
+}

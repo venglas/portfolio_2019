@@ -4,13 +4,13 @@
             Chyba wpisałeś zły link :/ 
         </h1>
 
-        <h2>
+        <!-- <h2>
             Spokojnie. Jeśli tylko zagrasz ze mną wgrę to przekieruję Cię pod prawidłowy adres ;)
         </h2>
 
         <h3>
             Mozemy zaczynać?
-        </h3>
+        </h3> -->
     </div>
 </template>
 
