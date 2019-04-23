@@ -1,7 +1,6 @@
 <template>
     <div class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
-      <ViewHeader text="o mnie"></ViewHeader>
-      <h1>kontakt</h1>
+      <ViewHeader text="Kontakt"></ViewHeader>
     </div>
 </template>
 

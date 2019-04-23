@@ -9,6 +9,7 @@ import kontakt from '@/views/kontakt'
 import problemVirtualCd from '@/views/projects/problemVirtualCd';
 import canvasPongGame from '@/views/projects/canvasPongGame';
 import odkurzaCzary from '@/views/projects/odkurzaCzary';
+import margonemMultiBot from '@/views/projects/margonemMultiBot';
 
 import route404 from '@/views/404';
 
@@ -57,6 +58,12 @@ export default new Router({
       path: '/odkurza-czary',
       name: 'odkurzaCzary',
       component: odkurzaCzary
+    },
+
+    {
+      path: '/margonem-multi-bot',
+      name: 'margonemMultiBot',
+      component: margonemMultiBot
     },
 
     // 404

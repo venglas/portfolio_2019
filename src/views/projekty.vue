@@ -33,6 +33,16 @@
           project_code_link="https://github.com/venglas/canvas_pong_game"
         ></SingleProject>
 
+        <SingleProject 
+          project_name="Margonem Multi Bot"
+          project_description='Margonem Multi Bot jest to projekt exp bota do gry internetowej margonem. Projekt jest realizowany jako rozszerzenie do przeglądarki chrome.'
+          img_1="../../static/img/projects/margonem-multi-bot/slide4.png"
+          img_2="../../static/img/projects/margonem-multi-bot/slide1.png"
+          project_route="/margonem-multi-bot"
+          project_live_link="https://margonembot.wordpress.com/"
+          project_code_link="https://github.com/venglas/margonem-bot"
+        ></SingleProject>
+
       </section>
     </article>
 </template>
