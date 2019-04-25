@@ -45,11 +45,18 @@
         .info{
             @include small-bottom-space;
         }
+        .download-info{
+            font-size: 10px;
+            font-weight: 400;
+            font-family: $basicText;
+        }
         .button{
+            display: inline-block;
+
             border: 1px solid;
             text-decoration: none;
             font-size: 1rem;
-            padding: 5px 20px;
+            padding: 0px 20px;
             border-radius: 3px;
             background-color: rgba($lightBlue, .8);
             border-color: rgba($lightBlue, 1);
