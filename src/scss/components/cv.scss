@@ -1,5 +1,6 @@
 .article-cv{
     padding-bottom: 5rem; //fix height
+    line-height: 150%;
 
     &__header{
         @include big-bottom-space;
@@ -12,6 +13,7 @@
         }
         .basics-info{
             &__item{
+                .name{font-weight: 600}
                 .link{}
             }
         }

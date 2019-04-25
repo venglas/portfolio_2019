@@ -14,11 +14,11 @@
 
           <section class="basics-info">
             <div class="basics-info__item">
-              e-mail: bartek.bober97@gmail.com
+              <span class="name">e-mail:</span> bartek.bober97@gmail.com
             </div>
 
             <div class="basics-info__item">
-              Github: <a class="link" href="https://github.com/venglas">github.com/venglas</a>
+              <span class="name">Github:</span> <a class="link" href="https://github.com/venglas">github.com/venglas</a>
             </div>
           </section>
         </header>
@@ -132,7 +132,7 @@
 
           <SingleAbility
           ability_name="google extension"
-          ability_value="10"
+          ability_value="40"
           ></SingleAbility>
 
         </section>
