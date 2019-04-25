@@ -148,7 +148,7 @@
 
         <section class="article-cv__download-section">
           <h4 class="info">Pobierz pełną wersję CV</h4>
-          <button class="button">pobierz</button>
+          <a href="../static/cv-file/bartlomiej-bober-cv.pdf" class="button" download>pobierz</a>
         </section>
       </article>
     </div>

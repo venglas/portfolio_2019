@@ -14,7 +14,7 @@
         .basics-info{
             &__item{
                 .name{font-weight: 600}
-                .link{}
+                .link{text-decoration: underline}
             }
         }
     }
@@ -42,7 +42,28 @@
     }
 
     &__download-section{
-        .info{}
-        .button{}
+        .info{
+            @include small-bottom-space;
+        }
+        .button{
+            border: 1px solid;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 20px;
+            border-radius: 3px;
+            background-color: rgba($lightBlue, .8);
+            border-color: rgba($lightBlue, 1);
+            color: $white;
+            transition: all ease-in-out 400ms;
+
+            &:hover{
+                background-color: rgba($lightBlue, 1);
+                transform: translateY(-2px);
+            }
+
+            &:active{
+                transform: translateY(0px);
+            }
+        }
     }
 }
