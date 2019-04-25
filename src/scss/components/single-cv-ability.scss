@@ -8,8 +8,16 @@
     &__name{
         text-transform: uppercase;
     }
-    &__value{
-        // align-self: flex-end;
-        // border: 1px solid red;
+    &__progress-bar{
+        -webkit-appearance: none;
+        &::-webkit-progress-bar{
+            background: transparent;
+            border: 1px solid rgba($lightBlue, .4);
+            border-radius: 10px;
+            height: 7px;
+        }
+        &::-webkit-progress-value{
+            background: $lightBlue;
+        }
     }
 }
