@@ -6,7 +6,7 @@
     left: 0;
     width: 80%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
 }
 
 .anim{
