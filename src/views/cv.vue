@@ -66,6 +66,11 @@
           ability_value="60"
           description="Korzystanie z mixinów, zmiennych, zagnieżdżania, animacji. Metodologia BEM, architektura 7-1."
           ></SingleAbility>
+          
+          <SingleAbility
+          ability_name="FLEXBOX"
+          ability_value="40"
+          ></SingleAbility>
 
           <SingleAbility
           ability_name="RWD"
@@ -74,14 +79,8 @@
           ></SingleAbility>
 
           <SingleAbility
-          ability_name="FLEXBOX"
-          ability_value="40"
-          ></SingleAbility>
-
-          <SingleAbility
           ability_name="bootstrap"
           ability_value="40"
-          
           ></SingleAbility>
 
           <SingleAbility
@@ -93,7 +92,6 @@
           <SingleAbility
           ability_name="jQuery"
           ability_value="30"
-          
           ></SingleAbility>
 
           <SingleAbility
@@ -103,21 +101,21 @@
           ></SingleAbility>
 
           <SingleAbility
+          ability_name="axios"
+          ability_value="30"
+          description="Wykonywanie prostych zapytań do API."
+          ></SingleAbility>
+
+          <SingleAbility
           ability_name="react"
           ability_value="10"
           description="Opanowane podstawowe zagadnienia pozwalające, na szybszy start nauki."
           ></SingleAbility>
 
           <SingleAbility
-          ability_name="gulp"
-          ability_value="30"
-          description="Podstawowa konfiguracja pozwalająca na utrzymanie prostego projektu."
-          ></SingleAbility>
-
-          <SingleAbility
-          ability_name="c++"
-          ability_value="10"
-          description="Podstawowe zagadnienia."
+          ability_name="google extension"
+          ability_value="40"
+          description="Postawienie i utrzymanie projektu."
           ></SingleAbility>
 
           <SingleAbility
@@ -133,15 +131,15 @@
           ></SingleAbility>
 
           <SingleAbility
-          ability_name="axios"
+          ability_name="gulp"
           ability_value="30"
-          description="Wykonywanie prostych zapytań do API."
+          description="Podstawowa konfiguracja pozwalająca na utrzymanie prostego projektu."
           ></SingleAbility>
 
           <SingleAbility
-          ability_name="google extension"
-          ability_value="40"
-          description="Postawienie i utrzymanie projektu."
+          ability_name="c++"
+          ability_value="10"
+          description="Podstawowe zagadnienia."
           ></SingleAbility>
 
         </section>
@@ -169,7 +167,7 @@ export default {
   mounted(){
     window.addEventListener('resize', () => {
         setTimeout(() => {
-            this.margin_left = `${this.$store.state.interface.menu_width}`;
+          this.margin_left = `${this.$store.state.interface.menu_width}`;
         }, 200);
     })
   }
