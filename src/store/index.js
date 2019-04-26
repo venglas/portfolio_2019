@@ -12,7 +12,8 @@ const store = new Vuex.Store({
             menu: {
                 isVisible: true,
                 left_side_menu: false
-            }
+            },
+            scroll_arrow_info: false
         },
         all_routes: []
     },
@@ -48,6 +49,14 @@ const store = new Vuex.Store({
 
         hide_left_side_menu(state){
             state.interface.menu.left_side_menu = false;
+        },
+
+        show_scroll_arrow(state){
+            state.interface.scroll_arrow_info = true;
+        },
+
+        hide_scroll_arrow(state){
+            state.interface.scroll_arrow_info = false;
         }
     }
 });

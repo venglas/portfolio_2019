@@ -7,6 +7,7 @@
     width: 80%;
     height: 100%;
     overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
+    scroll-behavior: smooth; // foor smooth scroling for auto down scrolling
     &::-webkit-scrollbar{
         width: 0px;
     }

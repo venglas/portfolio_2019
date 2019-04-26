@@ -22,7 +22,8 @@ export default {
   components: {Background, Menu, Logo},
   data:() => {
     return{
-      start_route: ''
+      start_route: '',
+      // view_scroll_position: this.$router.app.$el.children[3].scrollTop
     }
   },
   methods: {
@@ -54,6 +55,23 @@ export default {
         // this.$store.commit('hide_horizontal_menu');
         this.$store.commit('show_left_side_menu');        
       }
+    },
+
+    checkScrollHeight(){
+      const view = {
+        height: this.$router.app.$el.children[3].offsetHeight,
+        scroll_height: this.$router.app.$el.children[3].scrollHeight
+      }
+
+      if (view.height < view.scroll_height) {
+        this.$store.commit('show_scroll_arrow');
+      } else {
+        this.$store.commit('hide_scroll_arrow');
+      }
+    },
+
+    checkScrollPosition(){
+      console.log(this.$router.app.$el.children[3].scrollTop)
     }
   },
 
@@ -68,11 +86,19 @@ export default {
     this.checkStartRoute();
   },
 
+  mounted(){
+    this.checkScrollHeight();
+    this.checkScrollPosition();
+  },
+
   watch: {
     $route(){
       this.check_route();
       this.show_horizontal_menu();
+      this.checkScrollHeight();
     }
+
+    //here should be code for checking every scroll posiotion time in view
   }
 }
 </script>

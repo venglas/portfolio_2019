@@ -149,16 +149,19 @@
           <a href="../static/cv-file/bartlomiej-bober-cv.pdf" class="button" download>pobierz</a>
         </section>
       </article>
+
+      <ScrollDownArrow v-show="this.$store.state.interface.scroll_arrow_info"></ScrollDownArrow>
     </div>
 </template>
 
 <script>
 import ViewHeader from '../components/ViewHeader';
 import SingleAbility from '../components/SingleAbility';
+import ScrollDownArrow from '../components/ScrollDownArrow';
 
 export default {
   name: 'cv',
-  components: {ViewHeader, SingleAbility},
+  components: {ViewHeader, SingleAbility, ScrollDownArrow},
   data: () => {
     return {
       margin_left: '180px'
