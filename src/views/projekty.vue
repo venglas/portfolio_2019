@@ -44,16 +44,19 @@
         ></SingleProject>
 
       </section>
+
+      <ScrollDownArrow></ScrollDownArrow>
     </article>
 </template>
 
 <script>
 import ViewHeader from '../components/ViewHeader';
 import SingleProject from '../components/SingleProject';
+import ScrollDownArrow from '../components/ScrollDownArrow';
 
 export default {
   name: 'projekty',
-  components: {ViewHeader, SingleProject},
+  components: {ViewHeader, SingleProject, ScrollDownArrow},
   data: () => {
     return {
       margin_left: '180px',

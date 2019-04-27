@@ -60,18 +60,18 @@ export default {
 
 
     // this method meybe will be usable for refactorize scroll down arrow
-    // checkScrollHeight(){
-    //   const view = {
-    //     height: this.$router.app.$el.children[3].offsetHeight,
-    //     scroll_height: this.$router.app.$el.children[3].scrollHeight
-    //   }
+    checkScrollHeight(){
+      const view = {
+        height: this.$router.app.$el.children[3].offsetHeight,
+        scroll_height: this.$router.app.$el.children[3].scrollHeight
+      }
 
-    //   if (view.height < view.scroll_height) {
-    //     this.$store.commit('show_scroll_arrow');
-    //   } else {
-    //     this.$store.commit('hide_scroll_arrow');
-    //   }
-    // }
+      if (view.height < view.scroll_height) {
+        this.$store.commit('show_scroll_arrow');
+      } else {
+        this.$store.commit('hide_scroll_arrow');
+      }
+    }
   },
 
   created(){
@@ -87,7 +87,7 @@ export default {
 
   mounted(){
     this.checkScrollHeight();
-    this.checkScrollPosition();
+    // this.checkScrollPosition();
   },
 
   watch: {
