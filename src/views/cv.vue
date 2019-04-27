@@ -158,6 +158,7 @@
 import ViewHeader from '../components/ViewHeader';
 import SingleAbility from '../components/SingleAbility';
 import ScrollDownArrow from '../components/ScrollDownArrow';
+import {debounce} from 'lodash';
 
 export default {
   name: 'cv',
@@ -169,11 +170,11 @@ export default {
   },
 
   methods: {
-    setScrollPosition(){ // debounce this
+    setScrollPosition: debounce( function() {
       this.$store.commit('setScrollPosition', this.$el.scrollTop);
 
-      this.checkScrollPosition();      
-    },
+      this.checkScrollPosition();
+    }, 500),
 
     checkScrollPosition(){
       if (this.$store.state.interface.scroll_position <= 20) {
@@ -184,8 +185,9 @@ export default {
     }
   },
 
-
   mounted(){
+    this.checkScrollPosition();
+
     window.addEventListener('resize', () => {
       setTimeout(() => {
         this.margin_left = `${this.$store.state.interface.menu_width}`;
