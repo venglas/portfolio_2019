@@ -1,5 +1,5 @@
 <template>
-    <div class="view view--cv" v-bind:style="{marginLeft: margin_left}">
+    <div class="view view--cv" v-bind:style="{marginLeft: margin_left}" v-on:scroll="setScrollPosition">
       <ViewHeader text="Curriculum vitae"></ViewHeader>
 
       <article class="article-cv">
@@ -167,11 +167,29 @@ export default {
       margin_left: '180px'
     }
   },
+
+  methods: {
+    setScrollPosition(){ // debounce this
+      this.$store.commit('setScrollPosition', this.$el.scrollTop);
+
+      this.checkScrollPosition();      
+    },
+
+    checkScrollPosition(){
+      if (this.$store.state.interface.scroll_position <= 20) {
+        this.$store.commit('show_scroll_arrow')
+      } else {
+        this.$store.commit('hide_scroll_arrow')
+      }
+    }
+  },
+
+
   mounted(){
     window.addEventListener('resize', () => {
-        setTimeout(() => {
-          this.margin_left = `${this.$store.state.interface.menu_width}`;
-        }, 200);
+      setTimeout(() => {
+        this.margin_left = `${this.$store.state.interface.menu_width}`;
+      }, 200);
     })
   }
 }

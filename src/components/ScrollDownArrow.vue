@@ -6,7 +6,6 @@
 
 export default {
   name: 'ScrollDownArrow',
-//   props: ["ability_name", "ability_value", "description"],
   data: () => {
     return {
       value: 0
@@ -18,7 +17,6 @@ export default {
   methods: {
     scrollDown(){
         this.$el.parentElement.scrollTop = this.$el.parentElement.scrollHeight;
-        this.$store.commit('hide_scroll_arrow');
     }
   }
 }

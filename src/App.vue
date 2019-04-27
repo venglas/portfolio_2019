@@ -57,22 +57,21 @@ export default {
       }
     },
 
-    checkScrollHeight(){
-      const view = {
-        height: this.$router.app.$el.children[3].offsetHeight,
-        scroll_height: this.$router.app.$el.children[3].scrollHeight
-      }
 
-      if (view.height < view.scroll_height) {
-        this.$store.commit('show_scroll_arrow');
-      } else {
-        this.$store.commit('hide_scroll_arrow');
-      }
-    },
 
-    checkScrollPosition(){
-      console.log(this.$router.app.$el.children[3].scrollTop)
-    }
+    // this method meybe will be usable for refactorize scroll down arrow
+    // checkScrollHeight(){
+    //   const view = {
+    //     height: this.$router.app.$el.children[3].offsetHeight,
+    //     scroll_height: this.$router.app.$el.children[3].scrollHeight
+    //   }
+
+    //   if (view.height < view.scroll_height) {
+    //     this.$store.commit('show_scroll_arrow');
+    //   } else {
+    //     this.$store.commit('hide_scroll_arrow');
+    //   }
+    // }
   },
 
   created(){
@@ -95,10 +94,8 @@ export default {
     $route(){
       this.check_route();
       this.show_horizontal_menu();
-      this.checkScrollHeight();
+      // this.checkScrollHeight();
     }
-
-    //here should be code for checking every scroll posiotion time in view
   }
 }
 </script>

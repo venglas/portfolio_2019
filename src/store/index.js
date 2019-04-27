@@ -13,7 +13,8 @@ const store = new Vuex.Store({
                 isVisible: true,
                 left_side_menu: false
             },
-            scroll_arrow_info: false
+            scroll_arrow_info: false,
+            scroll_position: 0
         },
         all_routes: []
     },
@@ -57,6 +58,10 @@ const store = new Vuex.Store({
 
         hide_scroll_arrow(state){
             state.interface.scroll_arrow_info = false;
+        },
+
+        setScrollPosition(state, scroll_position){
+            state.interface.scroll_position = scroll_position;
         }
     }
 });
