@@ -7,22 +7,10 @@
                     <h1>{{item.name}}</h1>
                 </li>
 
-                <ul class="list list-social">
-                    <li class="list-social__item">
-                        <a href="https://www.linkedin.com/in/bartek-bober-71b785151" target="_blank">
-                            <img src="../assets/img/icons/linkedin.png" alt="linkedin icon" class="img">
-                        </a>
-                    </li>
-
-                    <li class="list-social__item">
-                        <a href="https://github.com/venglas" target="_blank">
-                            <img src="../assets/img/icons/github.png" alt="github icon" class="img">
-                        </a>
-                    </li>
-                </ul>
+                <SocialBar></SocialBar>
             </ul>
         </nav>
-
+        <!-- <SocialBar v-bind:style="{}"></SocialBar> -->
         <!-- <button class="button button--start" v-on:click="start_button" v-show="startButton.show" v-bind:class="{hideStartButton : startButton.hideStartButtonClass}">
             start
         </button> -->
@@ -30,8 +18,11 @@
 </template>
 
 <script>
+import SocialBar from './SocialBar';
+
 export default {
   name: 'Menu',
+  components: {SocialBar},
 
   data: () => {
     return {

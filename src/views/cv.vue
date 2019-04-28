@@ -190,7 +190,7 @@ export default {
 
     window.addEventListener('resize', () => {
       setTimeout(() => {
-        this.margin_left = `${this.$store.state.interface.menu_width}`;
+        // this.margin_left = `${this.$store.state.interface.menu_width}`;
       }, 200);
     })
   }

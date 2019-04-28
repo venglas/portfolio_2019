@@ -66,13 +66,16 @@ export default {
   },
 
   mounted(){
-    this.checkScrollPosition();
+    console.log(this.$el.scrollHeight, this.$el.clientHeight)
+    if (this.$el.scrollHeight > this.$el.clientHeight){
+      this.$store.commit('show_scroll_arrow')
+    } 
 
-    window.addEventListener('resize', () => {
-      setTimeout(() => {
-        this.margin_left = `${this.$store.state.interface.menu_width}`;
-      }, 200);
-    })
+    // window.addEventListener('resize', () => {
+    //   setTimeout(() => {
+    //     this.margin_left = `${this.$store.state.interface.menu_width}`;
+    //   }, 200);
+    // })
   },
 
   methods: {
