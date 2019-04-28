@@ -1,0 +1,10 @@
+.header--page-mobile{
+    .mobile-menu-switcher{
+        text-align: right;
+        margin: 2rem 2rem;
+        .img{
+            filter: brightness(0) invert(1);
+            max-width: 65px;
+        }
+    }
+}

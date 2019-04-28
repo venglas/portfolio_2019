@@ -1,6 +1,12 @@
 <template>
-    <header class="header header--page" v-bind:style="{ width: $store.state.interface.menu.header_width }">
-        <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible">
+    <header class="header header--page-mobile" v-bind:style="{ width: $store.state.interface.menu.header_width }">
+        
+        <div class="mobile-menu-switcher" v-on:click="toggleMenu">
+            <img src="../assets/img/icons/mobile-menu.png" alt="mobile menu icon" class="img" v-show="!mobile_menu.isOn">
+            <img src="../assets/img/icons/mobile-menu-close.png" alt="mobile menu close icon" class="img" v-show="mobile_menu.isOn">
+        </div>
+        
+        <!-- <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible">
             <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : $store.state.interface.menu.left_side_menu, leftSideMenu : $store.state.interface.menu.left_side_menu}">
                 
                 <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event), setHeaderWidth()">
@@ -9,11 +15,7 @@
 
                 <SocialBar></SocialBar>
             </ul>
-        </nav>
-        <!-- <SocialBar v-bind:style="{}"></SocialBar> -->
-        <!-- <button class="button button--start" v-on:click="start_button" v-show="startButton.show" v-bind:class="{hideStartButton : startButton.hideStartButtonClass}">
-            start
-        </button> -->
+        </nav> -->
     </header>
 </template>
 
@@ -21,28 +23,41 @@
 import SocialBar from './SocialBar';
 
 export default {
-  name: 'Menu',
+  name: 'MobileMenu',
   components: {SocialBar},
 
   data: () => {
     return {
-        menu: {
-            menu: null, // in mounted put there html element
-            routes: [],
-            // show: true,
-            hideMenu: false,
-            // leftSideMenu: false,
-            menuToggleTutorial: false,
-            // header_width: '100%'
-        },
-        // startButton: {
-        //     show: true,
-        //     hideStartButtonClass: false,
-        // }
+        mobile_menu: {
+            isOn: false
+        }
+        // menu: {
+        //     menu: null, // in mounted put there html element
+        //     routes: [],
+        //     // show: true,
+        //     hideMenu: false,
+        //     // leftSideMenu: false,
+        //     menuToggleTutorial: false,
+        //     // header_width: '100%'
+        // },
+
+        // device_size: window.outerWidth
+        // // startButton: {
+        // //     show: true,
+        // //     hideStartButtonClass: false,
+        // // }
     }
   },
 
   methods: {
+
+    toggleMenu(){
+        if (this.mobile_menu.isOn === false){
+            this.mobile_menu.isOn = true;
+        } else {
+            this.mobile_menu.isOn = false;
+        }
+    },
     // start_button(){
     //     this.menu.show = true;
     //     this.startButton.hideStartButtonClass = true;
@@ -53,8 +68,7 @@ export default {
 
     hideMenu(e){
         this.setActiveRoute(); // show us where we' re in smaller vertical menu via underlined the link
-        // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
-
+        // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking 
         e.target.parentElement.style.pointerEvents = 'none';
 
         this.$store.commit('hide_scroll_arrow'); // restart scroll arrow
@@ -129,21 +143,21 @@ export default {
   },
 
   created(){
-    let menu = [];
-    menu.push( this.$router.options.routes[0], this.$router.options.routes[2], this.$router.options.routes[3]);
+    // let menu = [];
+    // menu.push( this.$router.options.routes[0], this.$router.options.routes[2], this.$router.options.routes[3]);
     
-    this.menu.routes = menu;
+    // this.menu.routes = menu;
   },
 
   mounted () {
-    this.menu.menu = document.querySelector('#menu');
+    // this.menu.menu = document.querySelector('#menu');
     
-    window.addEventListener('resize', () => {
-        setTimeout(() => {
-            // console.log(`${this.menu.menu.offsetWidth + 25}px`)
-            this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` ); // should be refactorize
-        }, 500);
-    });
+    // window.addEventListener('resize', () => {
+    //     setTimeout(() => {
+    //         // console.log(`${this.menu.menu.offsetWidth + 25}px`)
+    //         this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` ); // should be refactorize
+    //     }, 500);
+    // });
   }
 }
 </script>

@@ -17,10 +17,30 @@
         animation-delay: 100ms;
         animation-fill-mode: forwards;
         animation-timing-function: ease;
+        
+        @media (max-width: $smallTablet){
+            flex-direction: column;
+            align-items: center;
+        }
 
         .list__item{
             cursor: pointer;
             transition: all ease-in-out 250ms;
+
+            @media (max-width: $smallTablet){
+                @include big-bottom-space;
+                
+                h1{
+                    font-size: 7rem;
+                }
+            }
+
+            @media (max-width: $smallPhone){
+                h1{
+                    font-size: 5rem;
+                }
+            }
+
             &:hover{
                 transform: scale(1.02);
                 text-shadow: 2px 2px 30px rgba(rgb(218, 255, 255), .55);
@@ -71,10 +91,19 @@
         margin: 1rem 2rem;
         transform: scale(1);
         transition: all ease;
+
+        @media (max-width: $tablet){
+            margin: 2rem 2rem;
+        }
+
         h1{
             font-size: 2rem;
             width: fit-content;
             position: relative;
+            
+            @media (max-width: $tablet){
+                font-size: 3rem;
+            }
         }
         &:hover h1::after{
             width: 100%;

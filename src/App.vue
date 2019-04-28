@@ -1,7 +1,8 @@
 <template>
   <div id="app" class="app" v-on:mouseover="show_logo" v-on:mouseleave="hide_logo">
     <Logo></Logo>
-    <Menu></Menu>
+    <Menu v-show="device_size > 768"></Menu>
+    <MobileMenu></MobileMenu>
     <Background></Background>
 
     <transition name="slide-fade">
@@ -16,14 +17,16 @@ import './scss/main.scss';
 import Background from './components/Background';
 import Menu from './components/Menu';
 import Logo from './components/Logo';
+import MobileMenu from './components/MobileMenu';
 import {debounce} from 'lodash';
 
 export default {
   name: 'App',
-  components: {Background, Menu, Logo},
+  components: {Background, Menu, Logo, MobileMenu},
   data:() => {
     return{
-      start_route: ''
+      start_route: '',
+      device_size: window.outerWidth
     }
   },
   methods: {
