@@ -1,7 +1,8 @@
-.list{
 
+
+.list{
     &--page-menu{
-        width: 100%;
+        // width: 100%;
         display: flex;
         justify-content: space-around;
         opacity: 0;
@@ -26,6 +27,18 @@
                 transform: scale(1.02);
                 text-shadow: 2px 2px 30px rgba(rgb(218, 255, 255), .55);
                 color: $white;
+            }
+        }
+
+        .list-social{
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: space-around;
+
+            &__item{
+                .img{
+                    max-width: 35px;
+                }
             }
         }
     }

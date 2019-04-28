@@ -2,17 +2,24 @@
     <header class="header header--page">
         <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible">
             <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : $store.state.interface.menu.left_side_menu, leftSideMenu : $store.state.interface.menu.left_side_menu}">
+                
                 <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
                     <h1>{{item.name}}</h1>
                 </li>
 
-                <!-- <div>
-                    <span>linkedin: </span> <span>https://www.linkedin.com/in/bartek-bober-71b785151</span>
-                </div>
+                <ul class="list list-social">
+                    <li class="list-social__item">
+                        <a href="https://www.linkedin.com/in/bartek-bober-71b785151" target="_blank">
+                            <img src="../assets/img/icons/linkedin.png" alt="linkedin icon" class="img">
+                        </a>
+                    </li>
 
-                <div>
-                    <span>Github: </span> <span>https://github.com/venglas</span>
-                </div> -->
+                    <li class="list-social__item">
+                        <a href="https://github.com/venglas" target="_blank">
+                            <img src="../assets/img/icons/github.png" alt="github icon" class="img">
+                        </a>
+                    </li>
+                </ul>
             </ul>
         </nav>
 
@@ -115,23 +122,7 @@ export default {
             }
         }
 
-    },
-
-    // menuAutoToggle(){
-    //     if (this.menu.menuToggleTutorial === false) {
-    //         this.menu.menuToggleTutorial = true;
-    //         setTimeout(() => {
-    //             this.menu.menu.style.left = '0px';
-    //             setTimeout(() => {
-    //                 this.menu.menu.style.left = `-${this.menu.menu.offsetWidth - 17}px`;
-    //             }, 2000);
-    //         }, 200);
-    //     }
-    // }
-
-    // autoShowLeftSideMenu(){
-
-    // }
+    }
   },
 
   created(){
@@ -147,7 +138,7 @@ export default {
     window.addEventListener('resize', () => {
         setTimeout(() => {
             // console.log(`${this.menu.menu.offsetWidth + 25}px`)
-            this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` );
+            this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` ); // should be refactorize
         }, 500);
     });
   }
