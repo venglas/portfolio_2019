@@ -16,6 +16,7 @@ import './scss/main.scss';
 import Background from './components/Background';
 import Menu from './components/Menu';
 import Logo from './components/Logo';
+import {debounce} from 'lodash';
 
 export default {
   name: 'App',
@@ -27,13 +28,13 @@ export default {
     }
   },
   methods: {
-    show_logo(){
-      this.$store.commit('interface_show'); // this can't be a commit via store 
-    },
+    show_logo: debounce( function() {
+      this.$store.commit('interface_show');
+    }, 250),
 
-    hide_logo(){
+    hide_logo: debounce( function() {
       this.$store.commit('interface_hide');
-    },
+    }, 250),
 
     check_route(){
       if (!this.$store.state.all_routes.includes(  this.$router.currentRoute.path ) ) {

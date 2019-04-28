@@ -1,5 +1,5 @@
 <template>
-    <article class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
+    <article class="view view--projekty" v-bind:style="{marginLeft: margin_left}" v-on:scroll="setScrollPosition">
       <ViewHeader text="projekty"></ViewHeader>
       
       <section class="section section--projects">
@@ -45,7 +45,7 @@
 
       </section>
 
-      <ScrollDownArrow></ScrollDownArrow>
+      <ScrollDownArrow v-show="this.$store.state.interface.scroll_arrow_info"></ScrollDownArrow>
     </article>
 </template>
 
@@ -53,6 +53,7 @@
 import ViewHeader from '../components/ViewHeader';
 import SingleProject from '../components/SingleProject';
 import ScrollDownArrow from '../components/ScrollDownArrow';
+import {debounce} from 'lodash';
 
 export default {
   name: 'projekty',
@@ -63,7 +64,10 @@ export default {
       projects: [],
     }
   },
+
   mounted(){
+    this.checkScrollPosition(); // fix this, on load component arrow isn't show
+
     window.addEventListener('resize', () => {
       setTimeout(() => {
         this.margin_left = `${this.$store.state.interface.menu_width}`;
@@ -72,8 +76,17 @@ export default {
   },
 
   methods: {
-    show_details(){
+    setScrollPosition: debounce( function() {
+      this.$store.commit('setScrollPosition', this.$el.scrollTop);
+      this.checkScrollPosition();
+    }, 500),
 
+    checkScrollPosition(){
+      if (this.$store.state.interface.scroll_position <= 20) {
+        this.$store.commit('show_scroll_arrow')
+      } else {
+        this.$store.commit('hide_scroll_arrow')
+      }
     }
   }
 }
