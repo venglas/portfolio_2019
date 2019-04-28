@@ -1,7 +1,22 @@
 <template>
-    <div class="view view--projekty" v-bind:style="{marginLeft: margin_left}">
+    <article class="view view--kontakt" v-bind:style="{marginLeft: margin_left}">
       <ViewHeader text="Kontakt"></ViewHeader>
-    </div>
+
+      <section class="section section--kontakt">
+        <header class="header">
+          <h3>Bartłomiej Bober</h3>
+          <h4>Junior Front-edn Developer</h4>
+        </header>
+        
+        <div class="contact-item">
+          <span class="contact-item__name">e-mail: </span> <a href="mailto:bartek.bober@gmail.com" class="link">bartek.bober@gmail.com</a>
+        </div>
+
+        <div class="contact-item">
+          <span class="contact-item__name">Numer kontaktowy: </span> <a href="tel:570640620" class="link">570-640-620</a>
+        </div>
+      </section>
+    </article>
 </template>
 
 <script>
@@ -24,38 +39,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-//   .article{
-//     &--about-me{
-//       .header{
-//         display: flex;
-//         align-items: center;
-//         margin-bottom: 3rem;
-
-//         .img{
-//           width: 4rem;
-//           margin-bottom: -1rem;
-//           animation-name: icon;
-//           animation-duration: 3s;
-//           animation-iteration-count: infinite;
-//         }
-
-//         @keyframes icon {
-//           0%{
-//             transform: rotateY(0)
-//           }
-//           100%{
-//             transform: rotateY(360deg)
-//           }
-//         }
-//       }
-
-//       .content{
-//         div{
-//           background-color: aquamarine;
-//         }
-//       }
-//     }
-//   }
-</style>

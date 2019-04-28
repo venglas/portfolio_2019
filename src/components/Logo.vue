@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="logo" v-show="$store.state.interface.is_on" v-on:click="$router.push('/')">
+        <div class="logo" v-show="$store.state.interface.is_on" v-on:click="$router.push('/'); reset_menu()">
             <div class="logo-border"></div>
             <span class="letter">
                 P
@@ -14,10 +14,19 @@ export default {
   name: 'Logo',
 
   data: () => {
-    return {}
+    return {
+    }
   },
 
-  methods: {},
+  methods: {
+    reset_menu(){
+      const menu_list_item = document.querySelector('#menu').children;
+      
+      for (let i = 0; i <= menu_list_item.length - 1; i++) {
+        menu_list_item[i].classList.remove('active_link');
+      }
+    }
+  },
 
   mounted () {}
 }

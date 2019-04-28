@@ -5,6 +5,14 @@
                 <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
                     <h1>{{item.name}}</h1>
                 </li>
+
+                <!-- <div>
+                    <span>linkedin: </span> <span>https://www.linkedin.com/in/bartek-bober-71b785151</span>
+                </div>
+
+                <div>
+                    <span>Github: </span> <span>https://github.com/venglas</span>
+                </div> -->
             </ul>
         </nav>
 
@@ -69,24 +77,44 @@ export default {
             }
         }
 
-        if (this.$store.state.interface.menu.isVisible === "false") {
+        if (this.$store.state.interface.menu.left_side_menu === false) {
+            setTimeout(() => {
+                switch(this.$router.app._route.name){
+                    case 'projekty':
+                        reset();
+                        this.menu.menu.children[0].classList.add('active_link');
+                    break;
+
+                    case 'cv':
+                        reset();
+                        this.menu.menu.children[1].classList.add('active_link');
+                    break;
+
+                    case 'kontakt':
+                        reset();
+                        this.menu.menu.children[2].classList.add('active_link');
+                    break;
+                }
+            }, 1000);
+        } else {
             switch(this.$router.app._route.name){
                 case 'projekty':
                     reset();
                     this.menu.menu.children[0].classList.add('active_link');
                 break;
 
-                case 'o mnie':
+                case 'cv':
                     reset();
                     this.menu.menu.children[1].classList.add('active_link');
                 break;
 
-                case 'cv':
+                case 'kontakt':
                     reset();
                     this.menu.menu.children[2].classList.add('active_link');
                 break;
             }
         }
+
     },
 
     // menuAutoToggle(){

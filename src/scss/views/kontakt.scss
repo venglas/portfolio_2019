@@ -1,0 +1,17 @@
+.view--kontakt{
+    .section{
+        .header{
+            @include big-bottom-space;
+        }
+        .contact-item{
+            @include medium-bottom-space;
+
+            &__name{
+                font-weight: bold;
+            }
+            .link{
+                font-style: italic;
+            }
+        }
+    }
+}
