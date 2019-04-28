@@ -66,7 +66,6 @@ export default {
   },
 
   mounted(){
-    console.log(this.$el.scrollHeight, this.$el.clientHeight)
     if (this.$el.scrollHeight > this.$el.clientHeight){
       this.$store.commit('show_scroll_arrow')
     } 
