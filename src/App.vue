@@ -23,8 +23,7 @@ export default {
   components: {Background, Menu, Logo},
   data:() => {
     return{
-      start_route: '',
-      // view_scroll_position: this.$router.app.$el.children[3].scrollTop
+      start_route: ''
     }
   },
   methods: {
@@ -53,24 +52,7 @@ export default {
       this.start_route = this.$route.path;
 
       if (this.start_route !== '/'){
-        // this.$store.commit('hide_horizontal_menu');
         this.$store.commit('show_left_side_menu');        
-      }
-    },
-
-
-
-    // this method meybe will be usable for refactorize scroll down arrow
-    checkScrollHeight(){
-      const view = {
-        height: this.$router.app.$el.children[3].offsetHeight,
-        scroll_height: this.$router.app.$el.children[3].scrollHeight
-      }
-
-      if (view.height < view.scroll_height) {
-        this.$store.commit('show_scroll_arrow');
-      } else {
-        this.$store.commit('hide_scroll_arrow');
       }
     }
   },
@@ -86,16 +68,12 @@ export default {
     this.checkStartRoute();
   },
 
-  mounted(){
-    this.checkScrollHeight();
-    // this.checkScrollPosition();
-  },
+  mounted(){},
 
   watch: {
     $route(){
       this.check_route();
       this.show_horizontal_menu();
-      // this.checkScrollHeight();
     }
   }
 }

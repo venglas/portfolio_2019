@@ -66,7 +66,7 @@ export default {
   },
 
   mounted(){
-    this.checkScrollPosition(); // fix this, on load component arrow isn't show
+    this.checkScrollPosition();
 
     window.addEventListener('resize', () => {
       setTimeout(() => {
