@@ -11,7 +11,8 @@ const store = new Vuex.Store({
             menu_width: 0,
             menu: {
                 isVisible: true,
-                left_side_menu: false
+                left_side_menu: false,
+                header_width: '100%'
             },
             scroll_arrow_info: false,
             scroll_position: 0
@@ -62,6 +63,10 @@ const store = new Vuex.Store({
 
         setScrollPosition(state, scroll_position){
             state.interface.scroll_position = scroll_position;
+        },
+
+        setHeaderWidth(state, width){
+            state.interface.menu.header_width = width;
         }
     }
 });

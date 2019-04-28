@@ -1,9 +1,9 @@
 <template>
-    <header class="header header--page">
+    <header class="header header--page" v-bind:style="{ width: $store.state.interface.menu.header_width }">
         <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible">
             <ul class="list list--page-menu" id="menu" v-bind:class="{hideHorizontalMenu : $store.state.interface.menu.left_side_menu, leftSideMenu : $store.state.interface.menu.left_side_menu}">
                 
-                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
+                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event), setHeaderWidth()">
                     <h1>{{item.name}}</h1>
                 </li>
 
@@ -41,7 +41,8 @@ export default {
             // show: true,
             hideMenu: false,
             // leftSideMenu: false,
-            menuToggleTutorial: false
+            menuToggleTutorial: false,
+            // header_width: '100%'
         },
         // startButton: {
         //     show: true,
@@ -68,6 +69,14 @@ export default {
             e.target.parentElement.style.pointerEvents = 'auto';
             this.$store.commit('show_left_side_menu');
         }, 500)
+    },
+
+    setHeaderWidth(){
+        if (this.$store.state.interface.menu.left_side_menu === false) {
+            setTimeout(() => {
+                this.$store.commit('setHeaderWidth', 'fit-content');
+            }, 1000);
+        }
     },
 
     hideLeftSideMenu(){
