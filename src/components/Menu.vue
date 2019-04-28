@@ -56,6 +56,8 @@ export default {
         // this.hideLeftSideMenu(); //uncomment this if u can use function which hide left side menu after clicking
         e.target.parentElement.style.pointerEvents = 'none';
 
+        this.$store.commit('hide_scroll_arrow'); // restart scroll arrow
+
         setTimeout(() => {
             e.target.parentElement.style.pointerEvents = 'auto';
             this.$store.commit('show_left_side_menu');
