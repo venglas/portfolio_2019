@@ -1,5 +1,5 @@
 <template>
-    <ul class="list list-social" v-show="$store.state.interface.menu.left_side_menu">
+    <ul class="list list-social">
         <li class="list-social__item">
             <a href="https://www.linkedin.com/in/bartek-bober-71b785151" target="_blank">
                 <img src="../assets/img/icons/linkedin.png" alt="linkedin icon" class="img">

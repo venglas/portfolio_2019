@@ -7,7 +7,7 @@
                     <h1>{{item.name}}</h1>
                 </li>
 
-                <SocialBar></SocialBar>
+                <SocialBar v-show="$store.state.interface.menu.left_side_menu"></SocialBar>
             </ul>
         </nav>
         <!-- <SocialBar v-bind:style="{}"></SocialBar> -->

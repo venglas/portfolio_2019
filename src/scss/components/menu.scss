@@ -18,7 +18,7 @@
         animation-fill-mode: forwards;
         animation-timing-function: ease;
         
-        @media (max-width: $smallTablet){
+        @media (max-width: $tablet){
             flex-direction: column;
             align-items: center;
         }
@@ -27,7 +27,7 @@
             cursor: pointer;
             transition: all ease-in-out 250ms;
 
-            @media (max-width: $smallTablet){
+            @media (max-width: $tablet){
                 @include big-bottom-space;
                 
                 h1{
@@ -52,6 +52,10 @@
             margin-top: 1.5rem;
             display: flex;
             justify-content: space-around;
+
+            @media(max-width: $tablet){
+                width: 40%;
+            }
 
             &__item{
                 .img{

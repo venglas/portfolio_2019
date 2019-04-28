@@ -1,10 +1,20 @@
 .header--page-mobile{
     .mobile-menu-switcher{
-        text-align: right;
+        position: absolute;
+        right: 0;
         margin: 2rem 2rem;
+        z-index: $z_index_max;
         .img{
             filter: brightness(0) invert(1);
             max-width: 65px;
         }
+    }
+
+    .nav--page{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: $z_index_med;
+        background-color: rgba($black, .7);
     }
 }

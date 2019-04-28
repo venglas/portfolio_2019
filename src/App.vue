@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="app" v-on:mouseover="show_logo" v-on:mouseleave="hide_logo">
     <Logo></Logo>
-    <Menu v-show="device_size > 768"></Menu>
-    <MobileMenu></MobileMenu>
+    <Menu v-show="device_size >= 769"></Menu>
+    <MobileMenu v-show="device_size <= 768"></MobileMenu>
     <Background></Background>
 
     <transition name="slide-fade">
