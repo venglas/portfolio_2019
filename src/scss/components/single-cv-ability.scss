@@ -9,6 +9,16 @@
         width: 75%;
     }
 
+    @media(max-width: $smallTablet){
+        width: 85%;
+    }
+
+    @media (max-width: $phone){
+        width: 100%;
+        @include big-bottom-space;
+        align-items: center;
+    }
+
     &__name{
         text-transform: uppercase;
     }

@@ -2,6 +2,10 @@
     padding-bottom: 5rem; //fix height
     line-height: 150%;
 
+    @media(max-width: $smallTablet){
+        background-color: rgba($black, .6);
+    }
+
     &__header{
         @include big-bottom-space;
 

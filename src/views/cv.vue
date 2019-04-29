@@ -1,6 +1,6 @@
 <template>
     <div class="view view--cv" v-bind:style="{marginLeft: margin_left}" v-on:scroll="setScrollPosition">
-      <ViewHeader text="Curriculum vitae"></ViewHeader>
+      <ViewHeader v-bind:text="header_text"></ViewHeader>
 
       <article class="article-cv">
         <header class="article-cv__header">
@@ -165,7 +165,8 @@ export default {
   components: {ViewHeader, SingleAbility, ScrollDownArrow},
   data: () => {
     return {
-      margin_left: '180px'
+      margin_left: '180px',
+      header_text: 'Curriculum vitae'
     }
   },
 
@@ -182,6 +183,12 @@ export default {
       } else {
         this.$store.commit('hide_scroll_arrow')
       }
+    }
+  },
+
+  created(){
+    if (window.outerWidth <= 425){
+      this.header_text = "CV";
     }
   },
 
