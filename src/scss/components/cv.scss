@@ -6,6 +6,10 @@
         background-color: rgba($black, .6);
     }
 
+    @media(max-width: $tablet){
+        font-size: 2rem;        
+    }
+
     &__header{
         @include big-bottom-space;
 
@@ -28,6 +32,12 @@
 
         .header{
             @include medium-bottom-space;
+            h4{
+                @media(max-width: $tablet){
+                    font-size: 3.5rem;
+                }
+            }
+            
         }
 
         &--experience{

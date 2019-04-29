@@ -6,7 +6,7 @@
 
         <h2 v-show="prop.text">
             <span v-for="letter in prop.text" class="header-letter" v-on:click="change_color" v-html="letter">
-                <!-- html text is added here via v-html because must use  &nbsp; as spacebar-->
+              <!-- html text is added here via v-html because must use  &nbsp; as spacebar-->
             </span>
         </h2>
     </header>

@@ -23,6 +23,16 @@
             font-size: 2.5rem;
             line-height: 1.5;
         }
+        @media (max-width: $smallTablet){
+            margin-top: 5rem;
+        }
+        .view__header{
+            @media(max-width: $phone){
+                h2{
+                    font-size: 3rem;
+                }
+            }
+        }
     }
 
     &--cv{
