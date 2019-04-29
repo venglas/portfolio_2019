@@ -9,6 +9,10 @@
         }
     }
 
+    @media(max-width: $phoneLandscape) and (orientation: landscape){
+     padding-top: 2rem;
+    }
+
     .header-letter{
         padding: 0;
         margin: 0;

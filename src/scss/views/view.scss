@@ -9,6 +9,10 @@
     overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
     scroll-behavior: smooth; // foor smooth scroling for auto down scrolling
 
+    @media(max-width: $phoneLandscape) and (orientation: landscape) {
+        top: 0;
+    }
+
     @media(max-width: $tablet){
         width: 100%;
         padding: 0 3rem;
