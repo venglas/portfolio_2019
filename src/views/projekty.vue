@@ -68,7 +68,11 @@ export default {
   mounted(){
     if (this.$el.scrollHeight > this.$el.clientHeight){
       this.$store.commit('show_scroll_arrow')
-    } 
+    }
+
+    if (window.outerWidth <= 768){
+      this.margin_left = 0;
+    }
 
     // window.addEventListener('resize', () => {
     //   setTimeout(() => {

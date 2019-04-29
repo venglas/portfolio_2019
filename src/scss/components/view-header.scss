@@ -1,6 +1,10 @@
 .view__header{
     @include medium-bottom-space;
 
+    @media(max-width: $tablet){
+        margin-left: 20%;
+    }
+
     .header-letter{
         padding: 0;
         margin: 0;

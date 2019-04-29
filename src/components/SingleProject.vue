@@ -1,5 +1,5 @@
 <template>
-    <div class="single-project">
+    <div class="single-project" v-on:click="mobileGotoProject">
         <header class="single-project__header">
             <div class="control-panel">
                 <button class="button__control-panel button__control-panel--red"></button>
@@ -73,12 +73,13 @@ export default {
 
    checkFavouriteAndAdd(){
     const data = JSON.parse( localStorage.getItem('favourites') );
-
-    data.forEach(el => {
-      if( el === this.project_name ) {
-        this.isFavourite = true;
-      }
-    });
+    if (data){
+      data.forEach(el => {
+        if( el === this.project_name ) {
+          this.isFavourite = true;
+        }
+      });
+    }
    },
 
    removeFavourite(){
@@ -93,6 +94,12 @@ export default {
 
      this.isFavourite = false;
      localStorage.setItem('favourites', JSON.stringify( data ) );
+   },
+
+   mobileGotoProject(){
+    if (window.outerWidth <= 620){
+      this.$router.push(this.project_route);
+    }
    }
   }
 }
