@@ -21,3 +21,11 @@
         }
     }
 }
+
+.view--project{
+    .view__header{
+        @media (max-width: $phone){
+            margin-left: 0;
+        }
+    }
+}
