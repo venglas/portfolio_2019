@@ -8,6 +8,21 @@
             overflow-y: scroll;
             height: 80vh;
             width: 80%;
+
+            &::-webkit-scrollbar {
+                width: 5px;   
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 5px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                width: 100%;
+                background: $lightBlue; 
+                border-radius: 5px;
+            }
             
             @media (max-width: $tablet){
                 width: 100%
