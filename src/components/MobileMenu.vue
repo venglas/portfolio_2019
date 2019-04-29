@@ -145,7 +145,7 @@ export default {
     },
 
     setMobileMenuBackground(){
-        if (this.$route !== '/'){
+        if (this.$route.path !== '/'){
             // this.mobile_menu.isOn = true;
             this.menu.mobileMenuBackground = 'rgba(0, 0, 0, .7)';
         }
