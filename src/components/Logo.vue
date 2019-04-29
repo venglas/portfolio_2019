@@ -33,9 +33,9 @@ export default {
         setTimeout(() => {
           this.$store.commit('setHeaderWidth', '100%');
 
-          if (window.outerWidth <= 768){
+          // if (window.outerWidth <= 768){
             window.location.reload(); // refactorize
-          }
+          // }
          
         }, 200);
       }
