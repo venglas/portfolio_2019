@@ -12,8 +12,8 @@
         <section class="content">
 
             <ProjectSlider
-                img1="../../static/img/projects/canvas-pong-game/slide1.png"
-                img2="../../static/img/projects/canvas-pong-game/slide2.png"
+                img1="../../static/img/projects/canvas-pong-game/slide1.jpg"
+                img2="../../static/img/projects/canvas-pong-game/slide2.jpg"
                 :img3="false"
                 :img4="false"
                 :img5="false"

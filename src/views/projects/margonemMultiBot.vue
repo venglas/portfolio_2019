@@ -12,10 +12,10 @@
         <section class="content">
 
             <ProjectSlider
-                img1="../../static/img/projects/margonem-multi-bot/slide1.png"
-                img2="../../static/img/projects/margonem-multi-bot/slide2.png"
-                img3="../../static/img/projects/margonem-multi-bot/slide3.png"
-                img4="../../static/img/projects/margonem-multi-bot/slide4.png"
+                img1="../../static/img/projects/margonem-multi-bot/slide1.jpg"
+                img2="../../static/img/projects/margonem-multi-bot/slide2.jpg"
+                img3="../../static/img/projects/margonem-multi-bot/slide3.jpg"
+                img4="../../static/img/projects/margonem-multi-bot/slide4.jpg"
                 :img5="false"
             >
             </ProjectSlider>
