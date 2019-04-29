@@ -55,7 +55,7 @@ export default {
       this.start_route = this.$route.path;
 
       if (this.start_route !== '/'){
-        this.$store.commit('show_left_side_menu');        
+        this.$store.commit('show_left_side_menu');
       }
     }
   },

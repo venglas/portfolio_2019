@@ -149,6 +149,12 @@ export default {
             // this.mobile_menu.isOn = true;
             this.menu.mobileMenuBackground = 'rgba(0, 0, 0, .7)';
         }
+    },
+
+    checkStartRoute(){
+        if (this.$route.path !== '/'){
+            this.mobile_menu.isOn = true;
+        }
     }
   },
 
@@ -162,6 +168,7 @@ export default {
   mounted () {
     this.menu.menu = document.querySelector('#menu');
     this.setMobileMenuBackground();
+    this.checkStartRoute();
     
     window.addEventListener('resize', () => {
         setTimeout(() => {
