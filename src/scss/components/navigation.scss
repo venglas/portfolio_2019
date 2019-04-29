@@ -1,5 +1,8 @@
 .nav {
     &--page{
         width: 100%;
+        @media(max-width: $phoneLandscape) and (orientation: landscape) { 
+            overflow-y: scroll;
+        }
     }
 }

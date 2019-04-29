@@ -23,6 +23,10 @@ body{
     width: 100%;
     height: 100vh;
     overflow: hidden;
+
+    @media(max-width: $smallTablet){
+        background-color: rgba($black, .6);
+    }
 }
 
 h1{

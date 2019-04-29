@@ -2,10 +2,6 @@
     padding-bottom: 5rem; //fix height
     line-height: 150%;
 
-    @media(max-width: $smallTablet){
-        background-color: rgba($black, .6);
-    }
-
     @media(max-width: $tablet){
         font-size: 2rem;        
     }

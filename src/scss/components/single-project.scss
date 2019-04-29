@@ -84,6 +84,10 @@
                 font-size: 3rem;
             }
 
+            @media(max-width: $phoneLandscape) and (orientation: landscape) {
+                font-size: 2.2rem;
+            }
+
             &__header{
                 @include small-space-desktop;
                 text-align: center;

@@ -6,7 +6,7 @@
             <img src="../assets/img/icons/mobile-menu-close.png" alt="mobile menu close icon" class="img" v-show="!mobile_menu.isOn">
         </div>
         
-        <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible && !mobile_menu.isOn">
+        <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible && !mobile_menu.isOn" v-bind:style="{backgroundColor: menu.mobileMenuBackground}">
             <ul class="list list--page-menu" id="menu">
                 
                 <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
@@ -39,6 +39,7 @@ export default {
             hideMenu: false,
             // leftSideMenu: false,
             menuToggleTutorial: false,
+            mobileMenuBackground: ''
             // header_width: '100%'
         },
 
@@ -163,11 +164,12 @@ export default {
   },
 
   watch: {
-    // $route(){
-    //     if (this.$route === '/'){
-    //         this.mobile_menu.isOn = true;
-    //     }
-    // }
+    $route(){
+        if (this.$route !== '/'){
+            // this.mobile_menu.isOn = true;
+            this.menu.mobileMenuBackground = 'rgba(0, 0, 0, .7)';
+        }
+    }
   }
 }
 </script>
