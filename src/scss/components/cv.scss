@@ -63,6 +63,11 @@
             color: $white;
             transition: all ease-in-out 400ms;
 
+            @media(max-width: $tablet){
+                padding: 5px 45px;
+                font-size: 2rem;
+            }
+
             &:hover{
                 background-color: rgba($lightBlue, 1);
                 transform: translateY(-2px);

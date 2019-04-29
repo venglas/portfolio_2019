@@ -60,6 +60,9 @@
             &__item{
                 .img{
                     max-width: 35px;
+                    @media(max-width: $tablet){
+                        max-width: 65px;
+                    }
                 }
             }
         }

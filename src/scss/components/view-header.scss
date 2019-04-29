@@ -2,7 +2,10 @@
     @include medium-bottom-space;
 
     @media(max-width: $tablet){
-        margin-left: 20%;
+        margin-left: 10%;
+        h2{
+            font-size: 6rem;
+        }
     }
 
     .header-letter{
