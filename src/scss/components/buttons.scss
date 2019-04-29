@@ -55,7 +55,12 @@
         filter: brightness(0) invert(1);
         border: none;
         .img{
+            margin-left: 3px; // for reduce the animation offset
             height: 2rem;
+            animation-name: backButton;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+
             @media(max-width: $tablet){
                 height: 4rem;
             }
