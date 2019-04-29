@@ -142,6 +142,13 @@ export default {
             }
         }
 
+    },
+
+    setMobileMenuBackground(){
+        if (this.$route !== '/'){
+            // this.mobile_menu.isOn = true;
+            this.menu.mobileMenuBackground = 'rgba(0, 0, 0, .7)';
+        }
     }
   },
 
@@ -154,6 +161,7 @@ export default {
 
   mounted () {
     this.menu.menu = document.querySelector('#menu');
+    this.setMobileMenuBackground();
     
     window.addEventListener('resize', () => {
         setTimeout(() => {
@@ -165,10 +173,7 @@ export default {
 
   watch: {
     $route(){
-        if (this.$route !== '/'){
-            // this.mobile_menu.isOn = true;
-            this.menu.mobileMenuBackground = 'rgba(0, 0, 0, .7)';
-        }
+        this.setMobileMenuBackground();
     }
   }
 }
