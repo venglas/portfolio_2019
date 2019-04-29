@@ -188,6 +188,10 @@ export default {
   mounted(){
     this.checkScrollPosition();
 
+    if (window.outerWidth <= 768){
+      this.margin_left = 0;
+    }
+
     window.addEventListener('resize', () => {
       setTimeout(() => {
         // this.margin_left = `${this.$store.state.interface.menu_width}`;

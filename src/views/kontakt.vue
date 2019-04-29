@@ -35,7 +35,11 @@ export default {
       setTimeout(() => {
         this.margin_left = `${this.$store.state.interface.menu_width}`;
       }, 200);
-    })
+    });
+
+    if (window.outerWidth <= 768){
+      this.margin_left = 0;
+    }
   }
 }
 </script>

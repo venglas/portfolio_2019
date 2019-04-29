@@ -54,6 +54,9 @@ export default {
     }
   },
   mounted(){
+    if (window.outerWidth <= 768){
+      this.margin_left = 0;
+    }
   },
 
   methods: {
