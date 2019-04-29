@@ -45,6 +45,8 @@ export default {
     },
 
     show_horizontal_menu(){
+      console.log('path: ', this.$route.path);
+      
       if ( this.$route.path === '/') {
         this.$store.commit('show_horizontal_menu');
         this.$store.commit('hide_left_side_menu');
