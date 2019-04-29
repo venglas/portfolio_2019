@@ -2,7 +2,7 @@
     <transition name="fade">
         <div class="logo" v-show="$store.state.interface.is_on" v-on:click="$router.push('/'); reset_menu(), setHeaderWidth()">
             <div class="logo-border"></div>
-            <span class="letter">
+            <span class="letter" v-bind:style="{marginTop: macLetter}">
               P
             </span>
         </div>
@@ -15,6 +15,7 @@ export default {
 
   data: () => {
     return {
+      macLetter: '0'
     }
   },
 
@@ -35,8 +36,16 @@ export default {
         }, 200);
       }
     },
+
+    chekcIfMac(){
+      if (navigator.platform.match('Mac')){
+        this.macLetter = '5px';
+      }
+    }
   },
 
-  mounted () {}
+  mounted () {
+    this.chekcIfMac();
+  }
 }
 </script>
