@@ -9,7 +9,7 @@
         <nav class="nav nav--page" v-show="$store.state.interface.menu.isVisible && !mobile_menu.isOn">
             <ul class="list list--page-menu" id="menu">
                 
-                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event), setHeaderWidth()">
+                <li class="list__item" v-for="item in menu.routes" v-on:click="$router.push(item), hideMenu($event)">
                     <h1>{{item.name}}</h1>
                 </li>
 
@@ -160,6 +160,14 @@ export default {
             this.$store.commit('set_menu_width', `${this.menu.menu.offsetWidth + 25}px` ); // should be refactorize
         }, 500);
     });
+  },
+
+  watch: {
+    // $route(){
+    //     if (this.$route === '/'){
+    //         this.mobile_menu.isOn = true;
+    //     }
+    // }
   }
 }
 </script>

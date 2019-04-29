@@ -31,6 +31,7 @@ export default {
       if (this.$store.state.interface.menu.left_side_menu === true) {
         setTimeout(() => {
           this.$store.commit('setHeaderWidth', '100%');
+          window.location.reload(); // refactorize
         }, 200);
       }
     },

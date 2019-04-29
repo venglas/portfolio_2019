@@ -56,6 +56,9 @@
         border: none;
         .img{
             height: 2rem;
+            @media(max-width: $tablet){
+                height: 4rem;
+            }
         }
     }
 }

@@ -24,7 +24,7 @@
                 <header class="header">
                     Poniej znajduje się krótki film przedstawiający działanie exp bota.
                 </header>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/qiHix06F5wc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/qiHix06F5wc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="content__description">
