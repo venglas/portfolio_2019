@@ -9,7 +9,7 @@
         </header>
         
         <div class="contact-item">
-          <span class="contact-item__name">e-mail: </span> <a href="mailto:bartek.bober@gmail.com" class="link">bartek.bober@gmail.com</a>
+          <span class="contact-item__name">e-mail: </span> <a href="mailto:bartek.bober97@gmail.com" class="link">bartek.bober97@gmail.com</a>
         </div>
 
         <div class="contact-item">
