@@ -61,6 +61,16 @@
                         <img src="../../assets/img/icons/chrome.png" alt="Chrome icon" class="img icon">
                     </li>
 
+                    <li class="list__item">
+                        <a href="https://webpack.js.org/" target="_blank">Webpack</a>
+                        <img src="../../assets/img/icons/webpack.png" alt="Webpack icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://babeljs.io/" target="_blank">Babel</a>
+                        <img src="../../assets/img/icons/babel.png" alt="Babel icon" class="img icon">
+                    </li>
+
                 </ul>
             </div>
 
