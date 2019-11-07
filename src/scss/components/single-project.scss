@@ -1,170 +1,185 @@
-.single-project{
-    width: 40rem;
-    opacity: .85;
-    @include big-space-desktop;
-    transition: opacity ease-in-out 200ms;
+.single-project {
+	width: 40rem;
+	opacity: .85;
+	@include big-space-desktop;
+	transition: opacity ease-in-out 200ms;
 
-    @media (max-width: $tablet){
-        width: 75%;
-    }
+	@media (max-width: $tablet) {
+		width: 75%;
+	}
 
-    @media(max-width: $phone){
-        width: 100%;
-    }
+	@media (max-width: $phone) {
+		width: 100%;
+	}
 
-    &:hover{
-        opacity: 1;
-    }
+	&:hover {
+		opacity: 1;
+	}
 
-    &__header{
-        z-index: $z_index_max;
-        position: relative;
+	&__header {
+		z-index: $z_index_max;
+		position: relative;
 
-        .control-panel{
-            background-color: $macBarGray;
-            display: flex;
-            align-items: center;
-            padding: .5rem;
-            border-radius: 3px 3px 0 0;
+		.control-panel {
+			background-color: $macBarGray;
+			display: flex;
+			align-items: center;
+			padding: .5rem;
+			border-radius: 3px 3px 0 0;
 
-            &__title{
-                color: $macFontGray;
-                font-size: 1.2rem;
-                width: fit-content;
-                margin: 0 auto;
+			&__title {
+				color: $macFontGray;
+				font-size: 1.2rem;
+				width: fit-content;
+				margin: 0 auto;
 
-                @media (max-width: $tablet){
-                    font-size: 2.5rem;
-                }
+				@media (max-width: $tablet) {
+					font-size: 2.5rem;
+				}
 
-                @media(max-width: $phone){
-                    font-size: 2rem;
-                }
-            }
-        }
+				@media (max-width: $phone) {
+					font-size: 2rem;
+				}
+			}
+		}
 
-        .favourite{
-            position: absolute;
-            right: 7px;
-        }
-    }
+		.favourite {
+			position: absolute;
+			right: 7px;
+		}
+	}
 
-    &__img-holder{
-        position: relative;
+	&__img-holder {
+		position: relative;
 
-        &:hover .img--2{
-            opacity: 1;
-        }
+		&:hover .img--2 {
+			opacity: 1;
+		}
 
-        &:hover .overlay{
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
+		&:hover .overlay {
+			opacity: 1;
+			transform: translateY(0);
+			pointer-events: auto;
+		}
 
-        .overlay{
-            font-family: $basicText;
-            position: absolute;
-            background-color: rgba($black, .6);
-            transform: translateY(-100%);
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-            z-index: $z_index_med;
-            padding: 2rem 1.5rem;
-            pointer-events: none; // fix for jumping overlay
+		.overlay {
+			font-family: $basicText;
+			position: absolute;
+			background-color: rgba($black, .6);
+			transform: translateY(-100%);
+			opacity: 0;
+			width: 100%;
+			height: 100%;
+			z-index: $z_index_med;
+			padding: 2rem 1.5rem;
+			pointer-events: none; // fix for jumping overlay
 
-            transition: all ease-in-out 350ms;
+			transition: all ease-in-out 350ms;
 
-            @media(max-width: $smallTablet){
-                display: none;
-            }
+			@media (max-width: $smallTablet) {
+				display: none;
+			}
 
-            @media (max-width: $tablet){
-                font-size: 3rem;
-            }
+			@media (max-width: $tablet) {
+				font-size: 3rem;
+			}
 
-            @media(max-width: $phoneLandscape) and (orientation: landscape) {
-                font-size: 2.2rem;
-            }
+			@media (max-width: $phoneLandscape) and (orientation: landscape) {
+				font-size: 2.2rem;
+			}
 
-            &__header{
-                @include small-space-desktop;
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                
-                .header{
-                    font-weight: 400;
-                }
+			&__header {
+				@include small-space-desktop;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
 
-                .read-more{
-                    @include medium-space-desktop;
-                    text-decoration: none;
-                    border-radius: 2px;
-                    background-color: $macBarGray;
-                    color: $macFontGray;
-                    // font-size: 1.2rem;
-                    width: fit-content;
-                    align-self: center;
-                    padding: .5rem 1.5rem;
-                    transition: all ease-in-out 150ms;
+				.header {
+					font-weight: 400;
+				}
 
-                    &:hover{
-                        box-shadow: 3px 3px 10px $black;
-                        text-shadow: 0px 0px 10px rgba($black, .3);
-                        transform: scale(1.005);
-                    }
-                }
-            }
+				.read-more {
+					@include medium-space-desktop;
+					text-decoration: none;
+					border-radius: 2px;
+					background-color: $macBarGray;
+					color: $macFontGray;
+					// font-size: 1.2rem;
+					width: fit-content;
+					align-self: center;
+					padding: .5rem 1.5rem;
+					transition: all ease-in-out 150ms;
 
-            .link-section{
-                display: flex;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                .link{
-                    @include small-space-desktop;
-                    position: relative;
+					&:hover {
+						box-shadow: 3px 3px 10px $black;
+						text-shadow: 0px 0px 10px rgba($black, .3);
+						transform: scale(1.005);
+					}
+				}
+			}
 
-                    &:after{
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: -2px;
-                        width: 0;
-                        height: 2px;
-                        background-color: $white;
-                        transition: width ease-in-out 200ms;
-                    }
+			.link-section {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.link {
+					@include small-space-desktop;
+					position: relative;
 
-                    &:hover{
-                        &:after{
-                            width: 100%;
-                        }
-                    }
-                }
-                .link{
-                    &:nth-child(3){
-                        margin: 0 auto;
-                        cursor: pointer;
-                    }
-                    &:nth-child(4){
-                        margin: 0 auto;
-                        cursor: pointer;
-                    }
-                }
-            }
-        }
+					&:after {
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: -2px;
+						width: 0;
+						height: 2px;
+						background-color: $white;
+						transition: width ease-in-out 200ms;
+					}
 
-        .img{
-            transition: opacity ease-in-out 350ms;
+					&:hover {
+						&:after {
+							width: 100%;
+						}
+					}
+				}
+				.link {
+					&:nth-child(3) {
+						margin: 0 auto;
+						cursor: pointer;
+					}
+					&:nth-child(4) {
+						margin: 0 auto;
+						cursor: pointer;
+					}
+				}
+			}
+		}
 
-            &--2{
-                opacity: 0;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-    }
+		.img {
+			transition: opacity ease-in-out 350ms;
+
+			&--2 {
+				opacity: 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		.tag {
+			position: absolute;
+			z-index: 999;
+			right: -9%;
+			bottom: 53px;
+			bottom: 18%;
+			transform: rotate(-51deg);
+			padding: 5px 4rem;
+			background-color: green;
+
+			clip-path: polygon(0% 0, 100% 0, 79% 100%, 14% 100%);
+
+			// TODO: fix on each devices (shape of tag)
+		}
+	}
 }
