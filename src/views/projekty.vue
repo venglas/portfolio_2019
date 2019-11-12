@@ -15,7 +15,9 @@
         project_route="/problem-virtual-cd"
         project_live_link="https://venglas.github.io/PRO8L3eM/dist/index.html"
         project_code_link="https://github.com/venglas/PRO8L3eM"
-      ></SingleProject>
+      >
+        <ProjectTag type="finished">Finished</ProjectTag>
+      </SingleProject>
 
       <SingleProject
         project_name="Odkurza-czary.pl"
@@ -25,7 +27,9 @@
         project_route="/odkurza-czary"
         project_live_link="http://odkurza-czary.pl/"
         project_code_link="https://github.com/venglas/odkurzacze"
-      ></SingleProject>
+      >
+        <ProjectTag type="finished">Finished</ProjectTag>
+      </SingleProject>
 
       <SingleProject
         project_name="Canvas pong game"
@@ -35,7 +39,9 @@
         project_route="/canvas-pong-game"
         project_live_link="https://venglas.github.io/canvas_pong_game/"
         project_code_link="https://github.com/venglas/canvas_pong_game"
-      ></SingleProject>
+      >
+        <ProjectTag type="finished">Finished</ProjectTag>
+      </SingleProject>
 
       <SingleProject
         project_name="Margonem Multi Bot"
@@ -45,7 +51,9 @@
         project_route="/margonem-multi-bot"
         project_live_link="https://margonembot.wordpress.com/"
         project_code_link="https://github.com/venglas/margonem-bot"
-      ></SingleProject>
+      >
+        <ProjectTag type="inProgress">in progress</ProjectTag>
+      </SingleProject>
 
       <SingleProject
         project_name="Badoo spam bot"
@@ -55,7 +63,9 @@
         project_route="/badoo-spam-bot"
         project_live_link="https://github.com/venglas/badoo_bot"
         project_code_link="https://github.com/venglas/badoo_bot"
-      ></SingleProject>
+      >
+        <ProjectTag type="inProgress">in progress</ProjectTag>
+      </SingleProject>
     </section>
 
     <ScrollDownArrow v-show="this.$store.state.interface.scroll_arrow_info"></ScrollDownArrow>
@@ -66,11 +76,12 @@
 import ViewHeader from "../components/ViewHeader";
 import SingleProject from "../components/SingleProject";
 import ScrollDownArrow from "../components/ScrollDownArrow";
+import ProjectTag from "../components/projectTag";
 import { debounce } from "lodash";
 
 export default {
   name: "projekty",
-  components: { ViewHeader, SingleProject, ScrollDownArrow },
+  components: { ViewHeader, SingleProject, ScrollDownArrow, ProjectTag },
   data: () => {
     return {
       margin_left: "180px",

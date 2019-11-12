@@ -46,6 +46,7 @@
 		.favourite {
 			position: absolute;
 			right: 7px;
+			filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, .7));
 		}
 	}
 
@@ -175,11 +176,22 @@
 			bottom: 18%;
 			transform: rotate(-51deg);
 			padding: 5px 4rem;
-			background-color: green;
 
 			clip-path: polygon(0% 0, 100% 0, 79% 100%, 14% 100%);
 
 			// TODO: fix on each devices (shape of tag)
+
+			&--finished {
+				background-color: green;
+			}
+
+			&--in-progress {
+				background-color: darken(orange, 10%);
+			}
+
+			&--closed {
+				background-color: gray;
+			}
 		}
 	}
 }

@@ -33,12 +33,13 @@
       <img v-bind:src="img_1" alt="project img" class="img img--1" />
       <img v-bind:src="img_2" alt="project img" class="img img--2" />
 
-      <div class="tag">finished</div>
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
+import projectTag from "./projectTag";
 export default {
   name: "SingleProject",
   props: [
@@ -50,6 +51,7 @@ export default {
     "project_live_link",
     "project_code_link"
   ],
+  components: { ProjectTag: projectTag },
   data: () => {
     return {
       isFavourite: false
