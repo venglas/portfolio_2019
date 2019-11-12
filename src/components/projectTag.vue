@@ -1,5 +1,5 @@
 <template>
-  <div class="tag" :class="typeclass">
+  <div class="tag" :class="typeclass" :style="{removed: removeTag}">
     <slot></slot>
   </div>
 </template>
@@ -11,16 +11,13 @@ export default {
   data() {
     return {
       typeClass: "tag--"
+      // removeTag: true
     };
   },
   methods: {
     // type() {}
   },
-  created() {
-    if (this.type === "finished") {
-      this.typeClass = "tag--finished";
-    }
-  },
+  created() {},
   computed: {
     typeclass() {
       const vm = this;
@@ -42,3 +39,9 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+// .removed {
+//   display: none;
+// }
+</style>

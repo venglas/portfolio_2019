@@ -14,6 +14,23 @@
 
 	&:hover {
 		opacity: 1;
+		transition: opacity ease-in-out 400ms;
+		.tag {
+			opacity: 0;
+			z-index: -1;
+			transition: all ease-in-out 400ms;
+			animation-name: hideHtml;
+			animation-delay: 450ms;
+		}
+
+		@keyframes hideHtml {
+			0% {
+				display: block;
+			}
+			100% {
+				display: none;
+			}
+		}
 	}
 
 	&__header {
@@ -176,6 +193,9 @@
 			bottom: 18%;
 			transform: rotate(-51deg);
 			padding: 5px 4rem;
+
+			opacity: 1;
+			transition: opacity ease-in-out 400ms;
 
 			clip-path: polygon(0% 0, 100% 0, 79% 100%, 14% 100%);
 
