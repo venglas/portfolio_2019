@@ -207,6 +207,11 @@
 
 			&--in-progress {
 				background-color: darken(orange, 10%);
+
+				//fix layout 'in progress' is to long for standard tag cuz shall be customized
+				bottom: 23%;
+				right: -11%;
+				clip-path: polygon(0% 0, 100% 0, 81% 100%, 12% 100%);
 			}
 
 			&--closed {
