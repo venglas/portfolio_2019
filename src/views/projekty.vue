@@ -85,6 +85,7 @@ export default {
   data: () => {
     return {
       margin_left: "180px",
+
       projects: []
     };
   },

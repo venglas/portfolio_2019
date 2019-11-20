@@ -6,7 +6,8 @@
 	left: 0;
 	width: 80%;
 	height: 100%;
-	overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
+	// overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
+	overflow-y: hidden;
 	scroll-behavior: smooth; // foor smooth scroling for auto down scrolling
 
 	@media (max-width: $phoneLandscape) and (orientation: landscape) {
@@ -51,12 +52,17 @@
 				margin-left: 10%;
 			}
 		}
+
+		@media (max-width: $tablet) {
+			overflow-y: scroll;
+		}
 	}
 
 	&--cv {
 		@media (max-width: $tablet) {
 			font-size: 2.5rem;
 			line-height: 1.5;
+			overflow-y: scroll;
 		}
 	}
 }
@@ -75,4 +81,8 @@
 	100% {
 		transform: rotate(180deg);
 	}
+}
+
+.tabletScrollFix {
+	overflow-y: scroll;
 }
