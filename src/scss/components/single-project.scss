@@ -210,13 +210,19 @@
 
 			// TODO: fix on each devices (shape of tag)
 
+			@media (max-width: $smallDesktop) {
+				bottom: 20%;
+				right: -11%;
+			}
+
+			@media (max-width: 940px) {
+				bottom: 4rem;
+				right: -4rem;
+			}
+
 			@media (max-width: $tablet) {
 				font-size: 1.8rem;
-				// right: -6.5%;
-				// bottom: 10.5%;
-
 				right: -4.5rem;
-
 				bottom: 3.8rem;
 				clip-path: polygon(0% 0, 100% 0, 72% 100%, 18% 100%);
 			}
@@ -232,6 +238,11 @@
 				bottom: 22%;
 				right: -11.5%;
 				clip-path: polygon(0% 0, 100% 0, 78% 100%, 14% 102%);
+
+				@media (max-width: $smallDesktop) {
+					bottom: 24%;
+					right: -13%;
+				}
 
 				@media (max-width: $tablet) {
 					// right: -7.5%;
