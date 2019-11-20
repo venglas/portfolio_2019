@@ -188,18 +188,30 @@
 		.tag {
 			position: absolute;
 			z-index: 999;
-			right: -9%;
+			right: -10%;
 			bottom: 53px;
 			bottom: 18%;
-			transform: rotate(-51deg);
+			transform: rotate(-52deg);
 			padding: 5px 4rem;
 
 			opacity: 1;
 			transition: opacity ease-in-out 400ms;
 
-			clip-path: polygon(0% 0, 100% 0, 79% 100%, 14% 100%);
+			// clip-path: polygon(0% 0, 100% 0, 79% 100%, 14% 100%);
+			clip-path: polygon(0% 0, 100% 0, 75% 100%, 15% 100%);
 
 			// TODO: fix on each devices (shape of tag)
+
+			@media (max-width: $tablet) {
+				font-size: 1.8rem;
+				// right: -6.5%;
+				// bottom: 10.5%;
+
+				right: -4.5rem;
+
+				bottom: 3.8rem;
+				clip-path: polygon(0% 0, 100% 0, 72% 100%, 18% 100%);
+			}
 
 			&--finished {
 				background-color: green;
@@ -209,9 +221,19 @@
 				background-color: darken(orange, 10%);
 
 				//fix layout 'in progress' is to long for standard tag cuz shall be customized
-				bottom: 23%;
-				right: -11%;
-				clip-path: polygon(0% 0, 100% 0, 81% 100%, 12% 100%);
+				bottom: 22%;
+				right: -11.5%;
+				clip-path: polygon(0% 0, 100% 0, 78% 100%, 14% 102%);
+
+				@media (max-width: $tablet) {
+					// right: -7.5%;
+					// bottom: 14%;
+
+					right: -5.1rem;
+					bottom: 5rem;
+
+					clip-path: polygon(0% 0, 100% 0, 77% 100%, 14.5% 100%);
+				}
 			}
 
 			&--closed {
