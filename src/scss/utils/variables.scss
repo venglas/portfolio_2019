@@ -14,7 +14,6 @@ $basicFont: 'Orbitron', sans-serif;
 $barcode: 'Libre Barcode 39 Text';
 $basicText: 'Montserrat', sans-serif;
 
-
 //Z-INDEXS
 $z_index_max: 999;
 $z_index_med: 500;
@@ -22,6 +21,7 @@ $z_index_min: 0;
 
 // BREAKPOINTS
 
+$smallDesktop: '1024px';
 $tablet: '768px';
 $smallTablet: '625px';
 $phone: '425px';

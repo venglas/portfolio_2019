@@ -1,73 +1,74 @@
 // default style of each view
 
-.view{
-    position: absolute;
-    top: 2rem;
-    left: 0;
-    width: 80%;
-    height: 100%;
-    overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
-    scroll-behavior: smooth; // foor smooth scroling for auto down scrolling
+.view {
+	position: absolute;
+	top: 2rem;
+	left: 0;
+	width: 80%;
+	height: 100%;
+	overflow-y: scroll; // this scrollbar should be hidden on windows (only his appearance)
+	scroll-behavior: smooth; // foor smooth scroling for auto down scrolling
 
-    @media(max-width: $phoneLandscape) and (orientation: landscape) {
-        top: 0;
-    }
+	@media (max-width: $phoneLandscape) and (orientation: landscape) {
+		top: 0;
+	}
 
-    @media(max-width: $tablet){
-        width: 100%;
-        padding: 0 3rem;
-    }
+	@media (max-width: $smallDesktop) {
+		max-width: calc(100vw - 180px);
+		width: 100%;
+		padding: 0 3rem;
+	}
 
-    &::-webkit-scrollbar{
-        width: 0px;
-    }
+	&::-webkit-scrollbar {
+		width: 0px;
+	}
 
-    &--project{
-        @media(max-width: $tablet){
-            font-size: 2.5rem;
-            line-height: 1.5;
-        }
-        @media (max-width: $smallTablet){
-            margin-top: 5rem;
-        }
-        .view__header{
-            @media(max-width: $phone){
-                h2{
-                    font-size: 3rem;
-                }
-            }
-        }
-    }
+	&--project {
+		@media (max-width: $tablet) {
+			font-size: 2.5rem;
+			line-height: 1.5;
+		}
+		@media (max-width: $smallTablet) {
+			margin-top: 5rem;
+		}
+		.view__header {
+			@media (max-width: $phone) {
+				h2 {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
 
-    &--projekty{
-        @media(max-width: 1024px) and (orientation: landscape){
-            width: 100%;
-            .view__header{
-                margin-left: 10%;
-            }
-        }
-    }
+	&--projekty {
+		@media (max-width: 1024px) and (orientation: landscape) {
+			width: 100%;
+			.view__header {
+				margin-left: 10%;
+			}
+		}
+	}
 
-    &--cv{
-        @media(max-width: $tablet){
-            font-size: 2.5rem;
-            line-height: 1.5;
-        }
-    }
+	&--cv {
+		@media (max-width: $tablet) {
+			font-size: 2.5rem;
+			line-height: 1.5;
+		}
+	}
 }
 
-.anim{
-    animation-name: letter_jump;
-    animation-duration: 200ms;
-    animation-fill-mode: forwards;
+.anim {
+	animation-name: letter_jump;
+	animation-duration: 200ms;
+	animation-fill-mode: forwards;
 }
 
 @keyframes letter_jump {
-    0% {
-        transform: rotate(0deg)
-    }
+	0% {
+		transform: rotate(0deg);
+	}
 
-    100% {
-        transform: rotate(180deg)
-    }
+	100% {
+		transform: rotate(180deg);
+	}
 }

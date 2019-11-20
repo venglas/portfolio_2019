@@ -4,6 +4,14 @@
 	@include big-space-desktop;
 	transition: opacity ease-in-out 200ms;
 
+	@media (max-width: $smallDesktop) {
+		width: 35rem;
+	}
+
+	@media (max-width: 940px) {
+		width: 55rem;
+	}
+
 	@media (max-width: $tablet) {
 		width: 75%;
 	}
