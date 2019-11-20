@@ -244,6 +244,12 @@
 					right: -13%;
 				}
 
+				@media (max-width: 940px) {
+					bottom: 4.5rem;
+
+					right: -4.5rem;
+				}
+
 				@media (max-width: $tablet) {
 					// right: -7.5%;
 					// bottom: 14%;
