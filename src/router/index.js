@@ -11,6 +11,7 @@ import canvasPongGame from '@/views/projects/canvasPongGame';
 import odkurzaCzary from '@/views/projects/odkurzaCzary';
 import margonemMultiBot from '@/views/projects/margonemMultiBot';
 import badooSpamBot from '@/views/projects/badooSpamBot';
+import nbaHallOfHate from "@/views/projects/nbaHallOfHate";
 
 import route404 from '@/views/404';
 
@@ -72,6 +73,12 @@ export default new Router({
 			path: '/badoo-spam-bot',
 			name: 'badooSpamBot',
 			component: badooSpamBot
+		},
+
+		{
+			path: '/nba-hall-of-hate',
+			name: 'nbaHallOfHate',
+			component: nbaHallOfHate
 		},
 
 		// 404

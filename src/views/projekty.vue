@@ -72,7 +72,7 @@
         project_description="Aplikacja webowa mająca na celu zbieranie opini, oraz w pewnym sensie gra społeczna jak i sieć łącząca fanów NBA :)"
         img_1="../../static/img/projects/nba-hall-of-hate/slide1.jpg"
         img_2="../../static/img/projects/nba-hall-of-hate/slide2.jpg"
-        project_route=""
+        project_route="/nba-hall-of-hate"
         project_live_link=""
         project_code_link=""
       >
