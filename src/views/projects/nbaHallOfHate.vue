@@ -1,6 +1,6 @@
 <template>
     <article class="view view--project" v-bind:style="{marginLeft: margin_left}">
-      <ViewHeader text="Margonem Multi Bot"></ViewHeader>
+      <ViewHeader text="NBA Hall Of Hate"></ViewHeader>
 
       <GoBackButton></GoBackButton>
 
@@ -30,36 +30,36 @@
                 Technologie jakie zostały użyte w projekcie to m.in: 
                 <ul class="list">
                     <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">Java rest api</a>
+                        <a href="https://www.java.com/" target="_blank">Java rest api</a>
                     </li>
 
                     <li class="list__item">
-                        <a href="https://wordpress.com/" target="_blank">Java 8</a>
+                        <a href="https://www.java.com/" target="_blank">Java 8</a>
                         <img src="../../assets/img/icons/java.png" alt="Java icon" class="img icon">
                     </li>
                     
                     <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">Spring boot</a>
+                        <a href="https://spring.io/projects/spring-boot" target="_blank">Spring boot</a>
                         <img src="../../assets/img/icons/spring.png" alt="Spring icon" class="img icon">
                     </li>
 
                     <li class="list__item">
-                        <a href="https://webpack.js.org/" target="_blank">hibernate</a>
+                        <a href="https://hibernate.org/" target="_blank">hibernate</a>
                         <img src="../../assets/img/icons/hibernate.png" alt="Hibernate icon" class="img icon">
                     </li>
 
                     <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">SQL</a>
+                        <a target="_blank">SQL</a>
                         <img src="../../assets/img/icons/sql.png" alt="Sql icon" class="img icon">
                     </li>
 
                     <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">PostgreSql</a>
+                        <a href="https://www.postgresql.org/" target="_blank">PostgreSql</a>
                         <img src="../../assets/img/icons/postgresql.png" alt="PostgrSql icon" class="img icon">
                     </li>
 
                     <li class="list__item">
-                        <a href="https://developer.chrome.com/extensions" target="_blank">Vue CLI3 (vuex, vue router)</a>
+                        <a href="https://cli.vuejs.org/" target="_blank">Vue CLI3 (vuex, vue router)</a>
                         <img src="../../assets/img/icons/vue.png" alt="Vue icon" class="img icon">
                     </li>
                 
@@ -69,7 +69,7 @@
                     </li>
 
                     <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">Axios</a>
+                        <a href="https://github.com/axios/axios" target="_blank">Axios</a>
                         <img src="../../assets/img/icons/axios.png" alt="Axios icon" class="img icon">
                     </li>
 
@@ -84,7 +84,7 @@
                     </li>
 
                     <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">Bootstrap material design</a>
+                        <a href="https://fezvrasta.github.io/bootstrap-material-design/docs/4.0/getting-started/introduction/" target="_blank">Bootstrap material design</a>
                         <img src="../../assets/img/icons/bootstrap.png" alt="Bootstrap icon" class="img icon">
                     </li>
 
