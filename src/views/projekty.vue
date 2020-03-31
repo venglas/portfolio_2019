@@ -73,8 +73,9 @@
         img_1="../../static/img/projects/nba-hall-of-hate/slide1.jpg"
         img_2="../../static/img/projects/nba-hall-of-hate/slide2.jpg"
         project_route="/nba-hall-of-hate"
-        project_live_link=""
-        project_code_link=""
+        project_live_link="https://lucid-wright-54f76e.netlify.com"
+        project_code_link="https://github.com/venglas/nba-hall-of-hate-front"
+        project_code_link2="https://github.com/venglas/nba-hall-of-hate"
       >
         <ProjectTag type="inProgress">in progress</ProjectTag>
       </SingleProject>

@@ -23,7 +23,18 @@
 
         <article class="link-section">
           <a v-bind:href="project_live_link" target="_blank" class="link">Zobacz projekt</a>
-          <a v-bind:href="project_code_link" target="_blank" class="link">Zobacz kod projektu</a>
+
+          <template v-if="project_code_link2">
+            <div class="link multiple-project-link">Zobacz kod projektu
+              <a v-bind:href="project_code_link" target="_blank" class="link link-hidden">Front-end</a>
+              <a v-bind:href="project_code_link2" target="_blank" class="link link-hidden">Back-end</a>
+            </div>
+          </template>
+
+          <template v-else>
+            <a v-bind:href="project_code_link" target="_blank" class="link">Zobacz kod projektu</a>
+          </template>
+          
 
           <a class="link" v-on:click="favourite" v-show="!isFavourite">Dodaj do ulubionych</a>
           <a class="link" v-on:click="removeFavourite" v-show="isFavourite">Usuń z ulubionych</a>
@@ -49,7 +60,8 @@ export default {
     "img_2",
     "project_route",
     "project_live_link",
-    "project_code_link"
+    "project_code_link",
+    "project_code_link2"
   ],
   components: { ProjectTag: projectTag },
   data: () => {
@@ -110,3 +122,19 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.multiple-project-link {
+  &:hover {
+    .link-hidden {
+      transition: all ease-in-out 400ms;
+      display: block;  
+      opacity: 1;
+    }
+  }
+  .link-hidden {
+    display: none;
+    opacity: 0;
+  }
+}
+</style>
