@@ -30,6 +30,50 @@
                 Technologie jakie zostały użyte w projekcie to m.in: 
                 <ul class="list">
                     <li class="list__item">
+                        <a href="https://babeljs.io/" target="_blank">Java rest api</a>
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://wordpress.com/" target="_blank">Java 8</a>
+                        <img src="../../assets/img/icons/java.png" alt="Java icon" class="img icon">
+                    </li>
+                    
+                    <li class="list__item">
+                        <a href="https://babeljs.io/" target="_blank">Spring boot</a>
+                        <img src="../../assets/img/icons/spring.png" alt="Spring icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://webpack.js.org/" target="_blank">hibernate</a>
+                        <img src="../../assets/img/icons/hibernate.png" alt="Hibernate icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://babeljs.io/" target="_blank">SQL</a>
+                        <img src="../../assets/img/icons/sql.png" alt="Sql icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://babeljs.io/" target="_blank">PostgreSql</a>
+                        <img src="../../assets/img/icons/postgresql.png" alt="PostgrSql icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://developer.chrome.com/extensions" target="_blank">Vue CLI3 (vuex, vue router)</a>
+                        <img src="../../assets/img/icons/vue.png" alt="Vue icon" class="img icon">
+                    </li>
+                
+                    <li class="list__item">
+                        <a href="https://www.ecma-international.org/ecma-262/6.0/" target="_blank">ES6</a>
+                        <img src="../../assets/img/icons/js.png" alt="javascript icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://babeljs.io/" target="_blank">Axios</a>
+                        <img src="../../assets/img/icons/axios.png" alt="Axios icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
                         <a href="https://www.w3.org/TR/html52/" target="_blank">HTML5</a>
                         <img src="../../assets/img/icons/html5.png" alt="html5 icon" class="img icon">
                     </li>
@@ -40,44 +84,10 @@
                     </li>
 
                     <li class="list__item">
-                        <a href="https://www.ecma-international.org/ecma-262/6.0/" target="_blank">ES6</a>
-                        <img src="../../assets/img/icons/js.png" alt="javascript icon" class="img icon">
-                    </li>
-
-                    <li class="list__item">
-                        <a href="https://wordpress.com/" target="_blank">Java 8</a>
-                        <img src="../../assets/img/icons/wordpress.png" alt="wordpress icon" class="img icon">
-                    </li>
-
-                    <li class="list__item">
-                        <a href="https://developer.chrome.com/extensions" target="_blank">Vue CLI3 (vuex, vue router)</a>
-                        <img src="../../assets/img/icons/chrome.png" alt="Chrome icon" class="img icon">
-                    </li>
-
-                    <li class="list__item">
-                        <a href="https://webpack.js.org/" target="_blank">hibernate</a>
-                        <img src="../../assets/img/icons/webpack.png" alt="Webpack icon" class="img icon">
-                    </li>
-
-                    <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">SQL</a>
-                        <img src="../../assets/img/icons/babel.png" alt="Babel icon" class="img icon">
-                    </li>
-
-                    <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">Axios</a>
-                        <img src="../../assets/img/icons/babel.png" alt="Babel icon" class="img icon">
-                    </li>
-
-                    <li class="list__item">
                         <a href="https://babeljs.io/" target="_blank">Bootstrap material design</a>
-                        <img src="../../assets/img/icons/babel.png" alt="Babel icon" class="img icon">
+                        <img src="../../assets/img/icons/bootstrap.png" alt="Bootstrap icon" class="img icon">
                     </li>
 
-                    <li class="list__item">
-                        <a href="https://babeljs.io/" target="_blank">Java rest api</a>
-                        <img src="../../assets/img/icons/babel.png" alt="Babel icon" class="img icon">
-                    </li>
                 </ul>
             </div>
 
