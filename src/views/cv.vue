@@ -56,54 +56,90 @@
           </header>
 
           <SingleAbility
+          ability_name="vue (CLI)"
+          ability_value="75"
+          description="Samodzielne postawienie i rozwijanie projektów opartych na CLI. Korzystanie z Vue Router oraz Vuex."
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="javascript"
+          ability_value="55"
+          description="Podstawowe zagadnienia umożliwiające swobodne tworzenie mniej skomplikowanych rozwiązań."
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="axios"
+          ability_value="75"
+          description="Wykonywanie prostych zapytań do API."
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="google extension"
+          ability_value="50"
+          description="Postawienie i utrzymanie projektu."
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="Java 8"
+          ability_value="35"
+          description="Rest API oparte na spring boot."
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="Spring boot"
+          ability_value="30"
+          description="Rest api"
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="hibernate"
+          ability_value="20"
+          description=""
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="PostgreSql"
+          ability_value="35"
+          description=""
+          ></SingleAbility>
+
+          <SingleAbility
+          ability_name="SQL"
+          ability_value="30"
+          description=""
+          ></SingleAbility>
+
+          <SingleAbility
           ability_name="HTML"
-          ability_value="70"
+          ability_value="85"
           description="Pisanie semantycznego kodu HTML nie stanowi dla mnie większych problemów."
           ></SingleAbility>
 
           <SingleAbility
           ability_name="CSS (SCSS)"
-          ability_value="60"
+          ability_value="75"
           description="Korzystanie z mixinów, zmiennych, zagnieżdżania, animacji. Metodologia BEM, architektura 7-1."
           ></SingleAbility>
           
           <SingleAbility
           ability_name="FLEXBOX"
-          ability_value="40"
+          ability_value="60"
           ></SingleAbility>
 
           <SingleAbility
           ability_name="RWD"
-          ability_value="60"
+          ability_value="70"
           description="Dostosowywanie kodu, wyglądu pod każde urządzenie."
           ></SingleAbility>
 
           <SingleAbility
           ability_name="bootstrap"
-          ability_value="40"
-          ></SingleAbility>
-
-          <SingleAbility
-          ability_name="javascript"
-          ability_value="35"
-          description="Podstawowe zagadnienia umożliwiające swobodne tworzenie mniej skomplikowanych rozwiązań."
+          ability_value="50"
           ></SingleAbility>
 
           <SingleAbility
           ability_name="jQuery"
-          ability_value="30"
-          ></SingleAbility>
-
-          <SingleAbility
-          ability_name="vue (CLI)"
-          ability_value="40"
-          description="Samodzielne postawienie i rozwijanie projektów opartych na CLI. Korzystanie z Vue Router oraz Vuex."
-          ></SingleAbility>
-
-          <SingleAbility
-          ability_name="axios"
-          ability_value="30"
-          description="Wykonywanie prostych zapytań do API."
+          ability_value="35"
           ></SingleAbility>
 
           <SingleAbility
@@ -113,33 +149,21 @@
           ></SingleAbility>
 
           <SingleAbility
-          ability_name="google extension"
-          ability_value="40"
-          description="Postawienie i utrzymanie projektu."
-          ></SingleAbility>
-
-          <SingleAbility
           ability_name="nightwatch"
           ability_value="10"
-          description="konfiguracja."
+          description="Opanowane podstawowe zagadnienia pozwalające, na szybszy start nauki."
           ></SingleAbility>
 
           <SingleAbility
           ability_name="parcel"
-          ability_value="50"
+          ability_value="70"
           description="Konfiguracja oraz utrzymanie prostego projektu."
           ></SingleAbility>
 
           <SingleAbility
           ability_name="gulp"
-          ability_value="30"
+          ability_value="60"
           description="Podstawowa konfiguracja pozwalająca na utrzymanie prostego projektu."
-          ></SingleAbility>
-
-          <SingleAbility
-          ability_name="c++"
-          ability_value="10"
-          description="Podstawowe zagadnienia."
           ></SingleAbility>
 
         </section>
