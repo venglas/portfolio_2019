@@ -52,7 +52,7 @@
         project_live_link="https://margonembot.wordpress.com/"
         project_code_link="https://github.com/venglas/margonem-bot"
       >
-        <ProjectTag type="inProgress">in progress</ProjectTag>
+        <ProjectTag type="closed">desolate</ProjectTag>
       </SingleProject>
 
       <SingleProject
@@ -64,7 +64,7 @@
         project_live_link="https://github.com/venglas/badoo_bot"
         project_code_link="https://github.com/venglas/badoo_bot"
       >
-        <ProjectTag type="inProgress">in progress</ProjectTag>
+        <ProjectTag type="closed">desolate</ProjectTag>
       </SingleProject>
 
       <SingleProject
@@ -79,6 +79,8 @@
       >
         <ProjectTag type="inProgress">in progress</ProjectTag>
       </SingleProject>
+
+      <!-- todo: add project refactorized and rewritied recrutation map application, new application based on map -->
     </section>
 
     <ScrollDownArrow v-show="this.$store.state.interface.scroll_arrow_info"></ScrollDownArrow>

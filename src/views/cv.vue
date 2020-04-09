@@ -166,6 +166,8 @@
           description="Podstawowa konfiguracja pozwalająca na utrzymanie prostego projektu."
           ></SingleAbility>
 
+          <!-- todo: add nuxt, vuetify, mapbox gl js -->
+
         </section>
 
         <section class="article-cv__download-section">
