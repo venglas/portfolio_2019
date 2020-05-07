@@ -83,12 +83,11 @@
       <SingleProject
         project_name="IG Helper Tool"
         project_description="IG Helper Tool to narzędzie, które pozwoli Ci łatwiej zarządzać Twoim profilem na portalu instagram oraz zdobyć większą ilość osób, które obserwują Twój profil."
-        img_1="../../static/img/projects/nba-hall-of-hate/slide1.jpg"
-        img_2="../../static/img/projects/nba-hall-of-hate/slide2.jpg"
+        img_1="../../static/img/projects/ig-helper-tool/slide1.jpg"
+        img_2="../../static/img/projects/ig-helper-tool/slide2.jpg"
         project_route="/ig-helper-tool"
-        project_live_link="https://lucid-wright-54f76e.netlify.com"
-        project_code_link="https://github.com/venglas/nba-hall-of-hate-front"
-
+        project_live_link="https://github.com/venglas/ig-helper"
+        project_code_link="https://github.com/venglas/ig-helper"
       >
         <ProjectTag type="inProgress">in progress</ProjectTag>
       </SingleProject>

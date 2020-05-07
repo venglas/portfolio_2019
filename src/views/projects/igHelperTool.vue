@@ -12,10 +12,10 @@
         <section class="content">
 
             <ProjectSlider
-                img1="../../static/img/projects/margonem-multi-bot/slide1.jpg"
-                img2="../../static/img/projects/margonem-multi-bot/slide2.jpg"
-                img3="../../static/img/projects/margonem-multi-bot/slide3.jpg"
-                img4="../../static/img/projects/margonem-multi-bot/slide4.jpg"
+                img1="../../static/img/projects/ig-helper-tool/slide1.jpg"
+                img2="../../static/img/projects/ig-helper-tool/slide2.jpg"
+                img3="../../static/img/projects/ig-helper-tool/slide3.jpg"
+                img4="../../static/img/projects/ig-helper-tool/slide4.jpg"
                 :img5="false"
             >
             </ProjectSlider>
@@ -24,8 +24,8 @@
                 <header class="header">
                     Poniej znajduje się krótki film przedstawiający działanie IG Helper Tool. Jest to film demonstracyjny przedstawiający działanie wersji 0.0.3 Szczegóły na temat działania znajdują się ponizej.
                 </header>
-                <!-- change on right video -->
-                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/qiHix06F5wc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                <iframe width="100%" height="400px" src="https://www.youtube.com/embed/AYSHRQAsCcU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div class="content__description">
