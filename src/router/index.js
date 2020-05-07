@@ -12,6 +12,7 @@ import odkurzaCzary from '@/views/projects/odkurzaCzary';
 import margonemMultiBot from '@/views/projects/margonemMultiBot';
 import badooSpamBot from '@/views/projects/badooSpamBot';
 import nbaHallOfHate from "@/views/projects/nbaHallOfHate";
+import igHelperTool from "@/views/projects/igHelperTool";
 
 import route404 from '@/views/404';
 
@@ -79,6 +80,12 @@ export default new Router({
 			path: '/nba-hall-of-hate',
 			name: 'nbaHallOfHate',
 			component: nbaHallOfHate
+		},
+
+		{
+			path: '/ig-helper-tool',
+			name: 'igHelperTool',
+			component: igHelperTool
 		},
 
 		// 404

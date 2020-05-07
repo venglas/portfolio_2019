@@ -30,11 +30,6 @@
             </li>
 
             <li class="list__item">
-              <a href="https://www.ecma-international.org/ecma-262/6.0/" target="_blank">ES6</a>
-              <img src="../../assets/img/icons/js.png" alt="javascript icon" class="img icon" />
-            </li>
-
-            <li class="list__item">
               <a href="https://sass-lang.com/" target="_blank">SCSS</a>
               <img src="../../assets/img/icons/sass.png" alt="scss icon" class="img icon" />
             </li>
