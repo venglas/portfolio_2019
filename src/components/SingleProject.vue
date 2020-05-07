@@ -25,7 +25,7 @@
           <a v-bind:href="project_live_link" target="_blank" class="link">Zobacz projekt</a>
 
           <template v-if="project_code_link2">
-            <div class="link multiple-project-link">Zobacz kod projektu
+            <div class="link multiple-project-link" @mouseenter="active = !active" @mouseleave="active = !active">Zobacz kod projektu
               <a v-bind:href="project_code_link" target="_blank" class="link link-hidden">Front-end</a>
               <a v-bind:href="project_code_link2" target="_blank" class="link link-hidden">Back-end</a>
             </div>
@@ -36,8 +36,8 @@
           </template>
           
 
-          <a class="link" v-on:click="favourite" v-show="!isFavourite">Dodaj do ulubionych</a>
-          <a class="link" v-on:click="removeFavourite" v-show="isFavourite">Usuń z ulubionych</a>
+          <a class="link link--favourite" v-on:click="favourite" v-show="!isFavourite && active">Dodaj do ulubionych</a>
+          <a class="link link--favourite" v-on:click="removeFavourite" v-show="isFavourite && active">Usuń z ulubionych</a>
         </article>
       </div>
 
@@ -66,7 +66,8 @@ export default {
   components: { ProjectTag: projectTag },
   data: () => {
     return {
-      isFavourite: false
+      isFavourite: false,
+      active: true
     };
   },
   mounted() {
