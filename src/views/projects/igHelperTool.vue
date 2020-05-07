@@ -1,6 +1,6 @@
 <template>
     <article class="view view--project" v-bind:style="{marginLeft: margin_left}">
-      <ViewHeader text="Margonem Multi Bot"></ViewHeader>
+      <ViewHeader text="IG Helper Tool"></ViewHeader>
 
       <GoBackButton></GoBackButton>
 
@@ -16,7 +16,7 @@
                 img2="../../static/img/projects/ig-helper-tool/slide2.jpg"
                 img3="../../static/img/projects/ig-helper-tool/slide3.jpg"
                 img4="../../static/img/projects/ig-helper-tool/slide4.jpg"
-                :img5="false"
+                img5="../../static/img/projects/ig-helper-tool/slide5.jpg"
             >
             </ProjectSlider>
 
@@ -88,6 +88,11 @@
                     <li class="list__item">
                         <a href="https://cli.vuejs.org/" target="_blank">Vue CLI3 (vuex, vue router)</a>
                         <img src="../../assets/img/icons/vue.png" alt="Vue icon" class="img icon">
+                    </li>
+
+                    <li class="list__item">
+                        <a href="https://vuetifyjs.com/" target="_blank">Vuetify</a>
+                        <img src="../../assets/img/icons/vuetify.png" alt="Vuetify icon" class="img icon">
                     </li>
 
                 </ul>

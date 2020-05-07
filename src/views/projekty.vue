@@ -31,6 +31,18 @@
       >
         <ProjectTag type="inProgress">in progress</ProjectTag>
       </SingleProject>
+
+      <SingleProject
+        project_name="Property Map Searcher"
+        project_description="Aplikacja PWA oparta na nuxt, vuetify oraz mapBoxGl, szukanie mieszkan z roznymi filtrami na podstawie map."
+        img_1="../../static/img/projects/property-map-searcher/slide1.jpg"
+        img_2="../../static/img/projects/property-map-searcher/slide2.jpg"
+        project_route="/property-map-searcher"
+        project_live_link="https://barlomiej-bober-rekrutacja.netlify.app/"
+        project_code_link="https://github.com/venglas/rekrutacja-2020-04-01"
+      >
+        <ProjectTag type="finished">Finished</ProjectTag>
+      </SingleProject>
       
       <SingleProject
         project_name="Margonem Multi Bot"
